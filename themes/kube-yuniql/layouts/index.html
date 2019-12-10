@@ -1,0 +1,58 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+
+<div id="main">
+  <div id="hero">
+    <h1>{{.Title}}</h1>
+    <p>{{.Description}} <a href="https://github.com/rdagumampan/yuniql/wiki/Getting-started" target="blank">Get started here</a></p>
+  </div>
+  <div id="action-buttons">
+    <a class="button primary big" href="https://github.com/rdagumampan/yuniql/releases"  onclick="_gaq.push(['_trackEvent', 'kube', 'download']);" target="blank">Download</a> <a class="button outline big" href="https://github.com/rdagumampan/yuniql" onclick="_gaq.push(['_trackEvent', 'kube', 'github']);" target="blank">View on Github</a>
+    <p>Zip-archive includes .exe file for windows clients. Docker images are also available.</p>
+  </div>
+  <div class="message warning" data-component="message"> <span class="close small"></span>
+    Latest update: First alpha release is scheduled in Q4 2019. Star and watch latest development of YUNIQL on Github!</a>
+  </div>
+  <div id="kube-features">
+    <div class="row gutters">
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Baseline" height="48" src="{{ "/img/kube/icon-baseline.png" | relURL }}" width="48">
+        </figure>
+        <h3>Raw SQL+</h3>
+        <p>Your versions on directories or folders, your scripts on series of plain old .sql files. Plus bulk import your master data and load-up lookup tables from CSV files.</p>
+      </div>
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Typography" height="48" src="{{ "/img/kube/icon-typo.png" | relURL }}" width="48">
+        </figure>
+        <h3>.NET Core Native</h3>
+        <p>Released as self-contained .NET Core 3.0 application. Stand-alone .exe file, no need for .NET CLR or any runtime dependencies to be installed.</p>
+      </div>
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Minimalism" height="48" src="{{ "/img/kube/icon-minimalism.png" | relURL }}" width="48">
+        </figure>
+        <h3>Cloud Ready</h3>
+        <p>Platform tested for Azure SQL Database. Plugins for Amazon RDS and Google Cloud SQL is lined up for development. ***</p>
+      </div>
+    </div>
+    <div class="row gutters">
+      <div class="col col-4 item">
+        <h4>DevOps Friendly</h4>
+        <p>Docker base images and rich CLI commands for your CI/CD pipelines. Azure DevOps Tasks are prioritized for development. ***</p>
+      </div>
+      <div class="col col-4 item">
+        <h4>Extensible</h4>
+        <p>Simple and open interface to support other RDBMS platforms. Plugins are available for PostgreSql and MySql.</p>
+      </div>
+      <div class="col col-4 item">
+        <h4>Open Source</h4>
+        <p>Absolutely free for personal or commercial use. Released under Apache License version 2.0 and feel free to inspect code in GitHub repository.</p>
+    </div>
+  </div>
+</div>
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}

@@ -1,0 +1,24 @@
+{
+    "name": "www.getyuniql.org",
+    "preferGlobal": true,
+    "version": "0.0.1",
+    "author": "Rodel E. Dagumampan",
+    "description": "Yuniql",
+    "license": "Apache v2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.com/rdagumampan/getyuniql.org.git"
+    },
+    "engines": {
+        "node": ">=6.00"
+    },
+    "scripts": {
+        "start": "hugo server --buildDrafts --disableLiveReload=true",
+        "build": "hugo"
+    },
+    "dependencies": {
+        "html-minifier": "^3.5.3",
+        "hugo-bin": "^0.12.0",
+        "uglifycss": "0.0.27"
+    }
+}

@@ -1,0 +1,28 @@
+baseURL = "https://www.getyuniql.org"
+languageCode = "en-us"
+title = "YUNIQL"
+theme = "kube-yuniql"
+description = "Yuniql is a schema versioning and database migration tool for sql server and others. All versions are organized as series of ordinary directories and scripts are stored transparently as .sql files. yuniql simply automates what you would normally do by hand and executes all scripts in an orderly and transactional fashion."
+Paginate = 4
+
+[Params]
+  RSSLink = "/index.xml"
+  author = "YUNIQL" # add your company name
+  github = "rdagumampan" # add your github profile name
+  twitter = "rdagumampan" # add your twitter profile
+  email = "rdagumampan@gmail.com"
+
+[[menu.main]]
+    name = "Get started"
+    weight = 1
+    url = "https://github.com/rdagumampan/yuniql/wiki/Getting-started"
+
+[[menu.main]]
+    name = "How it Works"
+    weight = 2
+    url = "https://github.com/rdagumampan/yuniql/wiki/How-yuniql-works"
+
+[[menu.main]]
+    name = "Report bug"
+    weight = 3
+    url = "https://github.com/rdagumampan/yuniql/issues/new"
