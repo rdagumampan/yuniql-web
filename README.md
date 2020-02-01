@@ -2,15 +2,19 @@
 
 Hugo-based web project for https://getyuniql.org
 
-## Pre-requisites
-
-* Hugo
-
 ## How to test
 
-* hugo server -D
+```console
+choco install hugo
+
+git clone https://github.com/rdagumampan/yuniql-web.git c:/temp
+cd c:/temp
+
+hugo server -D
+```
 
 ## How to publish
 
-* hugo
-
+```console
+hugo
+```
