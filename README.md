@@ -1,6 +1,6 @@
 # yuniql-web
 
-Hugo-based web project for https://getyuniql.org
+Hugo-based web project for https://yuniql.io
 
 ## How to test
 
