@@ -1,8 +1,8 @@
-baseURL = "https://www.getyuniql.org"
+baseURL = "https://yuniql.io"
 languageCode = "en-us"
 title = "YUNIQL"
 theme = "kube-yuniql"
-description = "Yuniql is a schema versioning and database migration tool for sql server and others. All versions are organized as series of ordinary directories and scripts are stored transparently as .sql files. yuniql simply automates what you would normally do by hand and executes all scripts in an orderly and transactional fashion."
+description = "YUNIQL (yuu-nee-kel) is a database versioning and migration engine for SqlServer, PostgreSql and others. Use plain SQL to promote and facilitate end-to-end DB DevOps discipline. Provision fresh database every test run and manage releases via continuous delivery pipeline tasks."
 Paginate = 4
 
 [Params]

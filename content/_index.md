@@ -1,5 +1,5 @@
 +++
-description = "YUNIQL (yuu-nee-kel) is a schema versioning and database migration tool for sql server and others. Versions are organized as series of ordinary directories. Scripts are stored transparently as `.sql` files. YUNIQL simply automates what you would normally do by hand and executes scripts in an orderly and transactional fashion."
+description = "YUNIQL (yuu-nee-kel) is a database versioning and migration engine for SqlServer, PostgreSql and others. Use plain SQL to promote and facilitate end-to-end DB DevOps discipline. Provision fresh database every test run and manage releases via continuous delivery pipeline tasks."
 
 title = "YUNIQL"
 draft = false
