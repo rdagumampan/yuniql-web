@@ -19,7 +19,7 @@ Run your database migration from Azure DevOps Pipelines. The tasks downloads pac
 #### Azure DevOps Pipelines (YAML)
 This sample uses a SqlServer Database project available in GitHub and deploy the database into an Azure SQL Database. See https://github.com/rdagumampan/yuniql/tree/master/samples/basic-sqlserver-sample.
 
-``` yaml
+```
 trigger:
 - master
 

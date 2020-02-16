@@ -52,7 +52,7 @@ dir /O:N
 
 Create first script file `setup_tables.sql` on `v0.00`
 
-```sql
+```
 CREATE TABLE [dbo].[Visitor](
 	[VisitorID] [int] IDENTITY(1000,1) NOT NULL,
 	[FirstName] [nvarchar](255) NULL,
@@ -84,7 +84,7 @@ The following pipelines runs `sqlserver-sample` project into Azure SQL Database.
 <img src="https://raw.githubusercontent.com/rdagumampan/yuniql/master/assets/dockerized-migration-03.png">
 
 ##### Agent task: docker build
-```yaml
+```
 steps:
 - task: Docker@2
   displayName: 'docker build'
@@ -98,7 +98,7 @@ steps:
 
 ##### Agent task: docker run
 
-```yaml
+```
 variables:
   AzSqlDemoDatabase: '<YOUR-SQLDATABASE-CONNECTIONSTRING>'
 
@@ -137,7 +137,7 @@ docker push yuniql:win-x64-latest
 
 Modify the Docker file of your database project
 
-```dockerfile
+```
 #FROM rdagumampan/yuniql:linux-x64-latest
 FROM <your-internal-repository>/yuniql:linux-x64-latest
 COPY . ./db

@@ -23,7 +23,7 @@ yuniql version
 
 #### Install with Powershell
 Downloads latest yuniql CLI and append into `PATH` environment variable.
-```powershell
+```console
 Invoke-WebRequest -Uri https://github.com/rdagumampan/yuniql/releases/download/latest/yuniql-cli-win-x64-latest.zip -OutFile  "c:\temp\yuniql-win-x64-latest.zip"
 Expand-Archive "c:\temp\yuniql-win-x64-latest.zip" -DestinationPath "c:\temp\yuniql-cli"
 $Env:Path += ";c:\temp\yuniql-cli"
