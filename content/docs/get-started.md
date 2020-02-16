@@ -1,10 +1,10 @@
 +++
-title = "Quick Start"
-description = "Up and running in under 10 minutes"
-weight = 10
+title = "Get started!"
+description = "Kick-start your database devops in 10 minutes. Install, run, verify."
+bref = "This is an express guide to using yuniql CLI. Yuniql allows developers and DBAs to run migration steps from CLI. Run these commands line by line via Command Prompt (CMD)."
+weight = 1
 draft = false
 toc = false
-bref = "This is an express guide to using yuniql-cli. Yuniql allows developers and DBAs to run migration steps from CLI. Run these commands line by line via Command Prompt (CMD)."
 +++
 
 #### Install yuniql

@@ -5,7 +5,7 @@
     <div id="hero">
       <h1> {{ .Title}} </h1>
       <p class="hero-lead">
-           {{ .Params.bref | safeHTML }}.
+           {{ .Params.bref | safeHTML }}
       </p>
 
     </div> 
@@ -21,3 +21,5 @@
     </div>
     </div>
 {{ end }}
+
+{{ define "footer"}} {{ partial "footer" .}} {{end}}
