@@ -16,7 +16,7 @@ toc = false
 
 Deploy an SQL Server on Linux container or use your preferred instance.
 
-```console
+```shell
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd!" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
@@ -24,7 +24,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd!" -p 1400:1433 -d m
 
 Create new web app
 
-```console
+```shell
 dotnet --version
 3.0.100
 
@@ -34,21 +34,21 @@ cd console-sample
 
 Add `Yuniql.AspNetCore`
 
-```console
+```shell
 dotnet add package Yuniql.Core
 dotnet build
 ```
 
 Copy sample database into `_db` directory in your project
 
-```console
+```shell
 git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql-console
 cd c:\temp\yuniql-console\samples\basic-sqlserver-sample
 ```
 	
 Modify the `Main` method of `Program.cs`
 	
-```
+```csharp
 using Yuniql.Core;
 ...
 ...
@@ -78,7 +78,7 @@ static void Main(string[] args)
 
 Test run
 
-```console
+```shell
 dotnet build
 dotnet run --debug
 ```

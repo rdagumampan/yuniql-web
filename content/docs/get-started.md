@@ -10,13 +10,13 @@ toc = false
 #### Install yuniql
 Install yuniql CLI with Chocolatey or use alternative ways listed here https://github.com/rdagumampan/yuniql/wiki/Install-yuniql
 
-```console
+```shell
 choco install yuniql --version 0.350.0
 ```
 
 #### Download samples
 Clone yuniql repo and play with several samples for sqlserver, postgresql, mysql and other platforms. Find your samples here https://github.com/rdagumampan/yuniql/tree/master/samples
-```console
+```shell
 git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql-getstarted
 cd c:\temp\yuniql-getstarted\samples\sqlserver-all-features-sample
 ```
@@ -24,13 +24,13 @@ cd c:\temp\yuniql-getstarted\samples\sqlserver-all-features-sample
 #### Prepare connection
 Set your db connection string in environment variable. This demo uses local SQL Server instance. For more connection string samples, visit https://www.connectionstrings.com/sql-server/.
 
-```console
+```shell
 SETX YUNIQL_CONNECTION_STRING "Server=.\;Database=helloyuniql;Trusted_Connection=True;"
 ```
 
 #### Run migration<br>
 The following commands `yuniql` to discover the project directory, creates the target database if it doesn't exist and runs all migration steps in the order they are listed. These includes `.sql` files, directories, subdirectories, and csv files. Tokens are also replaced via `-k` parameters.
-```console
+```shell
 cd c:\temp\yuniql-getstarted\samples\sqlserver-all-features-sample
 
 yuniql run -a -k "VwColumnPrefix1=Vw1,VwColumnPrefix2=Vw2,VwColumnPrefix3=Vw3,VwColumnPrefix4=Vw4"
@@ -44,7 +44,7 @@ v1.01           2019-11-03T16:29:36.1130000     DESKTOP-ULR8GDO\rdagumampan
 
 #### Verify results<br>
 Query tables with SSMS or your preferred SQL client
-```
+```sql
 //SELECT * FROM [dbo].[Visitor]
 VisitorID   FirstName   LastName    Address  Email
 ----------- ----------- ----------- ------------------------------------------

@@ -12,13 +12,13 @@ Master data and lookup tables almost comes natural as part of every database pro
 Install Yuniql CLI<br>
 https://github.com/rdagumampan/yuniql/wiki/Install-yuniql.
 
-```console
+```shell
 choco install yuniql --version 0.350.0
 ```
 
 Initialize local version
 
-```console
+```shell
 yuniql init
 yuniql vnext
 ```
@@ -50,7 +50,7 @@ Create a `Visitor.csv` on version `v0.01`
 
 Run migration
 
-```console
+```shell
 yuniql run -a -c "<your-connection-string>"
 
 INF   2019-10-22T18:36:08.7621330Z   Executed script file C:\temp\yuniql-nightly\v0.01\setup-tables.sql.

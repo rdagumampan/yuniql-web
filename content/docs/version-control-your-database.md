@@ -22,7 +22,7 @@ Typically, we don't start our databases by hand-writing SQL scripts. Instead, we
 
 In this approach, you can generate all scripts from tool and place all scripts and directories inside `v0.00`. yuniql will discover and execute scripts in all directories and subdirectories.
 
-```bash
+```shell
 yuniql init
 cd v0.00
 dir /O:N
@@ -36,7 +36,7 @@ dir /O:N
 ##### Strategy 2: SqlScript-first
 For smaller databases especially those attached to microservices, the model is relatively small and tables can be scripted on the go. Its simple and you can manually place all your scripts in order in `v0.00`. Scripts are executed in order by file name.
 
-```bash
+```shell
 yuniql init
 cd v0.00
 dir /O:N
@@ -59,19 +59,19 @@ You can generate scripts from existing SQL Server databases using SSMS Export Sc
 [Download latest `yuniqlx` build here](https://ci.appveyor.com/api/buildjobs/fqmphdr60lamkqvx/artifacts/yuniqlx-nightly.zip)
 Setup your local workspace
 
-```bash
+```shell
 yuniql init
 ```
 
 Baseline your db
 
-```bash
+```shell
 yuniqlx baseline -c <your-source-database-connection-string> -p <your-v0.00-directory-path>
 ```
 
 Run your migration
 
-```bash
+```shell
 yuniql run -c <your-source-database-connection-string> -a
 ```
 

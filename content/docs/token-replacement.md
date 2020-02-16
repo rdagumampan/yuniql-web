@@ -25,7 +25,7 @@ ORDER BY E.FirstName ASC
 
 Pass the tokens when you run migration
 
-```bash
+```shell
 yuniql run -k "ENV-DBNAME-SUFFIX=DEV" -c "<you-dev-connection-string>"
 yuniql run -k "ENV-DBNAME-SUFFIX=TEST" -c "<you-test-connection-string>"
 yuniql run -k "ENV-DBNAME-SUFFIX=PROD" -c "<you-prod-connection-string>"
@@ -33,7 +33,7 @@ yuniql run -k "ENV-DBNAME-SUFFIX=PROD" -c "<you-prod-connection-string>"
 
 You may also pass the tokens as a series of key/value pairs separated by comma. 
 
-```bash
+```shell
 yuniql run -k "token-key1=token-value1,token-key2=token-value2" -c "<you-dev-connection-string>"
 yuniql run -k "token-key1=token-value1" -k "token-key2=token-value2" -c "<you-dev-connection-string>"
 ```

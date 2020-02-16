@@ -13,7 +13,7 @@ Environment-aware scripts are `sql` files that targets specific environment. For
 Any directory inside yuniql standard directories (`_init`,`_pre`,`_vxx.xx`,`_draft`,`_post`,`_erase`) that starts with underscore (`_`) represents an environment. To organize your repository, you may create `_dev`, `_test`, and `_prod` inside those directories or in any sub-directories.
 
 Example #1: Organizes script by directory
-```console
+```shell
 v1.00
 + _development
     - setup_tables.sql
@@ -26,7 +26,7 @@ v1.00
 ```
 
 Example #1: Organizes script in sub-directory
-```console
+```shell
 v1.00
 + setup-tables
   + _development
@@ -42,7 +42,7 @@ v1.00
 #### Run migrations
 Repositories organized with environment-aware scripts requires that environment code is pass during migration. Yuniql will throw exception and fail the migration when no environment code passed into CLI or API.
 
-```console
+```shell
 yuniql run -a --environment DEVELOPMENT
 yuniql run -a --environment TEST
 yuniql run -a --environment STAGING

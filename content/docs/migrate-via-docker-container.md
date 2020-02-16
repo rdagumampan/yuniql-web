@@ -24,13 +24,13 @@ When you call `docker build`, we pull the base image containing the nightly buil
 Install yuniql CLI
 Install yuniql CLI with Chocolatey or use alternative ways listed here https://github.com/rdagumampan/yuniql/wiki/Install-yuniql
 
-```console
+```shell
 choco install yuniql --version 0.350.0
 ```
 	
 Create new migration workspace
 
-```console
+```shell
 md c:\temp\yuniql-docker
 cd yuniql-docker
 
@@ -50,7 +50,7 @@ dir /O:N
 
 Create first script file `setup_tables.sql` on `v0.00`
 
-```
+```sql
 CREATE TABLE [dbo].[Visitor](
 	[VisitorID] [int] IDENTITY(1000,1) NOT NULL,
 	[FirstName] [nvarchar](255) NULL,
@@ -63,13 +63,13 @@ GO
 
 Build docker image
 
-```console
+```shell
 docker build -t sqlserver-example .
 ```
 
 Run migration from docker
 
-```console
+```shell
 docker run sqlserver-example -c "<your-connection-string>" -a
 docker logs <your-container-id> -f
 ```
@@ -82,7 +82,7 @@ The following pipelines runs `sqlserver-sample` project into Azure SQL Database.
 <img src="https://raw.githubusercontent.com/rdagumampan/yuniql/master/assets/dockerized-migration-03.png">
 
 ##### Agent task: docker build
-```
+```yaml
 steps:
 - task: Docker@2
   displayName: 'docker build'
@@ -96,7 +96,7 @@ steps:
 
 ##### Agent task: docker run
 
-```
+```yaml
 variables:
   AzSqlDemoDatabase: '<YOUR-SQLDATABASE-CONNECTIONSTRING>'
 
@@ -117,7 +117,7 @@ If your company policy disallow pulling images DockerHub, you may build the imag
 
 Build images and push to your preferred registry
 
-```console
+```shell
 docker build -t yuniql -f dockerfile.multi-stage-linux-x64 .
 docker tag yuniql:latest rdagumampan/yuniql:linux-x64-latest
 
@@ -125,7 +125,7 @@ docker login -u="%DOCKERHUB_USERNAME%" -p="%DOCKERHUB_PASSWORD%"
 docker push yuniql:linux-x64-latest
 ```
 
-```console
+```shell
 docker build -t yuniql -f dockerfile.multi-stage-win-x64 .
 docker tag yuniql:latest rdagumampan/yuniql:win-x64-latest
 
@@ -135,7 +135,7 @@ docker push yuniql:win-x64-latest
 
 Modify the Docker file of your database project
 
-```
+```dockerfile
 #FROM rdagumampan/yuniql:linux-x64-latest
 FROM <your-internal-repository>/yuniql:linux-x64-latest
 COPY . ./db
