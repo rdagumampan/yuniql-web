@@ -44,7 +44,7 @@ v1.01           2019-11-03T16:29:36.1130000     DESKTOP-ULR8GDO\rdagumampan
 
 #### Verify results<br>
 Query tables with SSMS or your preferred SQL client
-```sql
+```
 //SELECT * FROM [dbo].[Visitor]
 VisitorID   FirstName   LastName    Address  Email
 ----------- ----------- ----------- ------------------------------------------
