@@ -1,0 +1,3 @@
+[submodule "yuniql.io"]
+	path = yuniql.io
+	url = https://github.com/rdagumampan/yuniql.io.git
