@@ -48,6 +48,14 @@ yuniql run -a --environment TEST
 yuniql run -a --environment STAGING
 yuniql run -a --environment PRODUCTION
 ```
+### Learn further
+
+* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
+* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
+* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
+* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
+* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
+* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
 
 #### Found bugs?
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).

@@ -22,7 +22,7 @@ When you call `docker build`, we pull the base image containing the nightly buil
 #### Prepare database migration project
 
 Install yuniql CLI
-Install yuniql CLI with Chocolatey or use alternative ways listed here https://github.com/rdagumampan/yuniql/wiki/Install-yuniql
+Install yuniql CLI with Chocolatey or use alternative ways listed here https://yuniql.io/docs/install-yuniql
 
 ```shell
 choco install yuniql --version 0.350.0
@@ -140,6 +140,15 @@ Modify the Docker file of your database project
 FROM <your-internal-repository>/yuniql:linux-x64-latest
 COPY . ./db
 ```
+
+### Learn further
+
+* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
+* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
+* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
+* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
+* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
+* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
 
 #### Found bugs?
 

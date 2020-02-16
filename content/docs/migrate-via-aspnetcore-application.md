@@ -69,6 +69,15 @@ dotnet build
 dotnet run --debug
 ```
 
+### Learn further
+
+* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
+* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
+* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
+* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
+* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
+* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
+
 #### Found bugs?
 
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).

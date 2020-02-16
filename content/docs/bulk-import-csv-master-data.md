@@ -10,7 +10,7 @@ toc = false
 Master data and lookup tables almost comes natural as part of every database provisioning process. With this, you may prepare them in CSV files and yuniql will inspect them and bulk load into tables bearing same name as the CSV file. The following example demonstrates how to do this.
 
 Install Yuniql CLI<br>
-https://github.com/rdagumampan/yuniql/wiki/Install-yuniql.
+https://yuniql.io/docs/install-yuniql.
 
 ```shell
 choco install yuniql --version 0.350.0
@@ -64,6 +64,15 @@ Verify if all is good
 ```sql
 SELECT * FROM [dbo].[Visitor]
 ```
+
+### Learn further
+
+* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
+* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
+* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
+* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
+* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
+* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
 
 #### Found bugs?
 

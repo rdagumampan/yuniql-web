@@ -73,6 +73,16 @@ When `yuniql verify` is issued, it checks if all your versions can be executed w
 
 >WARNING: Be very careful when using this function as it has SEVERE consequences when run in PRODUCTION. Make sure to remove this pipeline task if you are cloning CI/CD pipelines from your DevOps tool.
 
+### Learn further
+
+* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
+* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
+* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
+* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
+* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
+* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
+* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
+
 #### Found bugs?
 
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).

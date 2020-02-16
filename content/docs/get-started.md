@@ -8,7 +8,7 @@ toc = false
 +++
 
 #### Install yuniql
-Install yuniql CLI with Chocolatey or use alternative ways listed here https://github.com/rdagumampan/yuniql/wiki/Install-yuniql
+Install yuniql CLI with Chocolatey or use alternative ways listed here https://yuniql.io/docs/install-yuniql
 
 ```shell
 choco install yuniql --version 0.350.0
@@ -58,11 +58,12 @@ VisitorID   FirstName   LastName    Address  Email
 <br>
 <img align="center" src="https://github.com/rdagumampan/yuniql/raw/master/assets/visitordb-screensot-ssms.png" width="700">
 
-### Further readings
+### Learn further
 
-* [Migrate via ASP.NET Core](https://github.com/rdagumampan/yuniql/wiki/How-to-run-migration-from-ASP.NET-Core)
-* [Migrate via Azure DevOps](https://github.com/rdagumampan/yuniql/wiki/How-to-run-migration-from-Azure-Devops)
-* [Migrate via Docker](https://github.com/rdagumampan/yuniql/wiki/How-to-run-migration-from-docker-container)
+* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
+* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
+* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
+* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
 
 ### Found bugs?
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).

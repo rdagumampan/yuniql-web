@@ -14,7 +14,7 @@ Run your database migration from Azure DevOps Pipelines. The tasks downloads pac
 #### Pre-requisites
 
 * Works only with Windows-based agents for now
-* Requires a yuniql compliant directory structure. To create this structure you may [install yuniql-cli](https://github.com/rdagumampan/yuniql/wiki/Install-yuniql), issue `yuniql init`, commit to a git repository and use the repository as input artifact in the pipelines. You may also copy our [existing samples](https://github.com/rdagumampan/yuniql/tree/master/samples) for your target database platform and commit to your own repo.
+* Requires a yuniql compliant directory structure. To create this structure you may [install yuniql-cli](https://yuniql.io/docs/install-yuniql), issue `yuniql init`, commit to a git repository and use the repository as input artifact in the pipelines. You may also copy our [existing samples](https://github.com/rdagumampan/yuniql/tree/master/samples) for your target database platform and commit to your own repo.
 
 #### Azure DevOps Pipelines (YAML)
 This sample uses a SqlServer Database project available in GitHub and deploy the database into an Azure SQL Database. See https://github.com/rdagumampan/yuniql/tree/master/samples/basic-sqlserver-sample.
@@ -69,6 +69,15 @@ Runs an uncommitted migration run. This performs a dry-run migration to verify i
 Erases the target database objects (tables, procedures, functions, and others) using user defined clean-up scripts placed in `_erase` directory. Yuniql doesn't have automated erasure so user have to prepare the scope of erasure. 
 
 >WARNING: This is helpful in Dev and Test. Be very careful and remove this task when cloning pipelines for Production!
+
+### Learn further
+
+* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
+* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
+* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
+* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
+* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
+* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
 
 #### Found bugs?
 

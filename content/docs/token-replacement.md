@@ -38,6 +38,15 @@ yuniql run -k "token-key1=token-value1,token-key2=token-value2" -c "<you-dev-con
 yuniql run -k "token-key1=token-value1" -k "token-key2=token-value2" -c "<you-dev-connection-string>"
 ```
 
+### Learn further
+
+* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
+* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
+* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
+* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
+* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
+* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
+
 #### Found bugs?
 
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
