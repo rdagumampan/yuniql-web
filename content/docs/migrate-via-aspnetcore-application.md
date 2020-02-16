@@ -4,7 +4,7 @@ description = "Run your database migration when your ASP.NET Core host service s
 weight = 10
 draft = false
 toc = false
-bref = "Run your database migration when your ASP.NET Core host service starts up. This ensures that database is always at latest compatible state before operating the service.
+bref = "Run your database migration when your ASP.NET Core host service starts up. This ensures that database is always at latest compatible state before operating the service."
 +++
 
 ## Pre-requisites
