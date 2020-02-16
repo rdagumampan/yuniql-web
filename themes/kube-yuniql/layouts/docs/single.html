@@ -18,11 +18,12 @@
      {{ $script := (delimit (slice "scripts" .Params.script) "/")}}
     {{ partial (string $script) .}}
     {{end }}
+
+    <div id="commento"></div>
+    <script src="https://cdn.commento.io/js/commento.js"></script>
+
     </div>
     </div>
 {{ end }}
-
-<div id="commento"></div>
-<script src="https://cdn.commento.io/js/commento.js"></script>
 
 {{ define "footer"}} {{ partial "footer" .}} {{end}}
