@@ -1,7 +1,7 @@
 +++
 title = "Migrate via ASP.NET Core app"
 description = "Run your database migration when your ASP.NET Core host service starts up"
-weight = 10
+weight = 11
 draft = false
 toc = false
 bref = "Run your database migration when your ASP.NET Core host service starts up. This ensures that database is always at latest compatible state before operating the service."
@@ -48,7 +48,7 @@ cd c:\temp\yuniql-aspnetcore\samples\basic-sqlserver-sample
 	
 Modify the `Configure` method of `Startup.cs`, add these lines
 	
-```csharp
+```console
 using Yuniql.AspNetCore;
 ...
 ...
