@@ -4,60 +4,65 @@ description = "Up and running in under 10 minutes"
 weight = 10
 draft = false
 toc = false
-bref = "YUNIQL simply automate what you would normally by hand. Starting up a database migration takes few minutes, here's how to get started from zero"
+bref = "This is an express guide to using yuniql-cli. Yuniql allows developers and DBAs to run migration steps from CLI. Run these commands line by line via Command Prompt (CMD)."
 +++
 
-## To start using **`yuniql`**
+#### Install yuniql
+Install yuniql CLI with Chocolatey or use alternative ways listed here https://github.com/rdagumampan/yuniql/wiki/Install-yuniql
 
-1. Clone sample project
-	```bash
-	git clone https://github.com/rdagumampan/yuniql c:\temp\yuniql
-	cd c:\temp\yuniql\sqlserver-samples\visitph-db
-	```
+```console
+choco install yuniql --version 0.350.0
+```
 
-2. Download latest `yuniql` build<br>
+#### Download samples
+Clone yuniql repo and play with several samples for sqlserver, postgresql, mysql and other platforms. Find your samples here https://github.com/rdagumampan/yuniql/tree/master/samples
+```console
+git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql-getstarted
+cd c:\temp\yuniql-getstarted\samples\sqlserver-all-features-sample
+```
 
-	```bash
-	powershell Invoke-WebRequest -Uri https://ci.appveyor.com/api/projects/rdagumampan/yuniql/artifacts/yuniql-nightly.zip -OutFile  "c:\temp\yuniql\yuniql-nightly.zip"
-	powershell Expand-Archive "c:\temp\yuniql\yuniql-nightly.zip" -DestinationPath "c:\temp\yuniql\sqlserver-samples\visitph-db"
-	```
+#### Prepare connection
+Set your db connection string in environment variable. This demo uses local SQL Server instance. For more connection string samples, visit https://www.connectionstrings.com/sql-server/.
 
-	>`Expand-Archive` requires at least powershell v5.0+ running on your machine. You may also [download manually here](https://ci.appveyor.com/api/projects/rdagumampan/yuniql/artifacts/yuniql-nightly.zip) and extract to desired directory.
+```console
+SETX YUNIQL_CONNECTION_STRING "Server=.\;Database=helloyuniql;Trusted_Connection=True;"
+```
 
-3. Set default connection string to target database<br>
-	- Using an sql account<br>
-	`Server=<server-instance>,[<port-number>];Database=VisitorDB;User Id=<sql-user-name>;Password=<sql-user-password>`	
-	- Using trusted connection<br>
-	`Server=<server-instance>,[<port-number>];Database=VisitorDB;Trusted_Connection=True;`<br><br>
-
-	```bash
-	SETX YUNIQL_CONNECTION_STRING "Server=.\;Database=VisitorDB;Trusted_Connection=True;"
-	```
-
-4. Run migration<br>
+#### Run migration<br>
 The following commands `yuniql` to discover the project directory, creates the target database if it doesn't exist and runs all migration steps in the order they are listed. These includes `.sql` files, directories, subdirectories, and csv files. Tokens are also replaced via `-k` parameters.
-	```bash
-	yuniql run -a -k "VwColumnPrefix1=Vw1,VwColumnPrefix2=Vw2,VwColumnPrefix3=Vw3,VwColumnPrefix4=Vw4"
-	yuniql info
+```console
+cd c:\temp\yuniql-getstarted\samples\sqlserver-all-features-sample
 
-	Version         Created                         CreatedBy
-	v0.00           2019-11-03T16:29:36.0130000     DESKTOP-ULR8GDO\rdagumampan
-	v1.00           2019-11-03T16:29:36.0600000     DESKTOP-ULR8GDO\rdagumampan
-	v1.01           2019-11-03T16:29:36.1130000     DESKTOP-ULR8GDO\rdagumampan
-	```
+yuniql run -a -k "VwColumnPrefix1=Vw1,VwColumnPrefix2=Vw2,VwColumnPrefix3=Vw3,VwColumnPrefix4=Vw4"
+yuniql info
 
-5. Verify results<br>
+Version         Created                         CreatedBy
+v0.00           2019-11-03T16:29:36.0130000     DESKTOP-ULR8GDO\rdagumampan
+v1.00           2019-11-03T16:29:36.0600000     DESKTOP-ULR8GDO\rdagumampan
+v1.01           2019-11-03T16:29:36.1130000     DESKTOP-ULR8GDO\rdagumampan
+```
+
+#### Verify results<br>
 Query tables with SSMS or your preferred SQL client
-	```sql
-	//SELECT * FROM [dbo].[Visitor]
-	VisitorID   FirstName   LastName    Address  Email
-	----------- ----------- ----------- ------------------------------------------
-	1000        Jack        Poole       Manila   jack.poole@never-exists.com
-	1001        Diana       Churchill   Makati   diana.churchill@never-exists.com
-	1002        Rebecca     Lyman       Rizal    rebecca.lyman@never-exists.com
-	1003        Sam         Macdonald   Batangas sam.macdonald@never-exists.com
-	1004        Matt        Paige       Laguna   matt.paige@never-exists.com
-	```
+```sql
+//SELECT * FROM [dbo].[Visitor]
+VisitorID   FirstName   LastName    Address  Email
+----------- ----------- ----------- ------------------------------------------
+1000        Jack        Poole       Manila   jack.poole@never-exists.com
+1001        Diana       Churchill   Makati   diana.churchill@never-exists.com
+1002        Rebecca     Lyman       Rizal    rebecca.lyman@never-exists.com
+1003        Sam         Macdonald   Batangas sam.macdonald@never-exists.com
+1004        Matt        Paige       Laguna   matt.paige@never-exists.com
+```
 
-	<br>
-	<img align="center" src="/images/visitordb-screensot-ssms.png" width="700">
+<br>
+<img align="center" src="https://github.com/rdagumampan/yuniql/raw/master/assets/visitordb-screensot-ssms.png" width="700">
+
+### Further readings
+
+* [Migrate via ASP.NET Core](https://github.com/rdagumampan/yuniql/wiki/How-to-run-migration-from-ASP.NET-Core)
+* [Migrate via Azure DevOps](https://github.com/rdagumampan/yuniql/wiki/How-to-run-migration-from-Azure-Devops)
+* [Migrate via Docker](https://github.com/rdagumampan/yuniql/wiki/How-to-run-migration-from-docker-container)
+
+### Found bugs?
+Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
