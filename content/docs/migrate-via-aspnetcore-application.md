@@ -4,10 +4,8 @@ description = "Run your database migration when your ASP.NET Core host service s
 weight = 10
 draft = false
 toc = false
-bref = "Run your database migration when your ASP.NET Core host service starts up. This ensures that database is always at latest compatible state before operating the service. This is made using `Yuniql.AspNetCore` nuget package. Package can be used for Worker and WebApp services."
+bref = "Run your database migration when your ASP.NET Core host service starts up. This ensures that database is always at latest compatible state before operating the service.
 +++
-
-Run your database migration when your ASP.NET Core host service starts up. This ensures that database is always at latest compatible state before operating the service. This is made using `Yuniql.AspNetCore` nuget package. Package can be used for Worker and WebApp services. 
 
 ## Pre-requisites
 - [.NET Core 3.0+ SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)
