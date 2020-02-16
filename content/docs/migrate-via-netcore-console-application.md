@@ -1,12 +1,11 @@
 +++
 title = "Migrate via .NET Core Console App"
 description = "Run your database migration when Console App starts."
-bref = "Run your database migration when Console App starts."
+bref = "Run your database migration when Console App starts. This ensures that database is always at latest compatible state before operating the service. This is made using `Yuniql.Core` nuget package. Package can be used for Worker and WebApp services."
 weight = 5
 draft = false
 toc = false
 +++
-Run your database migration when Console App starts. This ensures that database is always at latest compatible state before operating the service. This is made using `Yuniql.Core` nuget package. Package can be used for Worker and WebApp services. 
 
 #### Pre-requisites
 - [.NET Core 3.0+ SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)

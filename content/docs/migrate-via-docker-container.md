@@ -1,13 +1,11 @@
 +++
 title = "Migrate via Docker Container"
 description = "Run your database migration thru a Docker container with Yuniql runtime."
-bref = "Run your database migration thru a Docker container with yuniql runtime."
+bref = "Run your database migration thru a docker container. This is specially helpful on Linux environments and CI/CD pipelines running on Linux Agents as it facilitates your migration without having to worry any local installations or runtime dependencies."
 weight = 4
 draft = false
 toc = false
-+++
-
-Run your database migration thru a docker container. This is specially helpful on Linux environments and CI/CD pipelines running on Linux Agents as it facilitates your migration without having to worry any local installations or runtime dependencies. 
++++ 
 
 When you run `yuniql init` command, a baseline directory structure will be created automatically. This includes a ready-to-use Dockerfile.
 
