@@ -1,5 +1,5 @@
 +++
-title = "Environment-aware Migrations"
+title = "Run Environment-aware Migrations"
 description = "Apply conditional migrations where different set of migrations is executed in the target environment."
 bref = "Apply conditional migrations where different set of migrations is executed in the target environment."
 weight = 9
