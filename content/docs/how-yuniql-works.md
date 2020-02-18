@@ -39,42 +39,53 @@ Creates baseline directory structure that serves as your database migration work
 ---
 Identifies the latest version locally and increment the minor version with the format `v{major}.{minor}`. The command just helps reduce human errors and this can also be done manually.
 
-- `-m | --minor`<br/>
+- `-m | --minor`
+
     Default option. Increments major version by creating `vx.xx+1` folder
 
-- `-M | --major`<br/>
+- `-M | --major`
+
     Increments minor version by creating `vx+1.xx` folder
 
-- `-f | --file <file-name.sql>`<br/>
+- `-f | --file <file-name.sql>`
+
     Creates an empty sql file in the created major or minor version
 
 ##### <mark>yuniql run</mark>
 ---
 Inspects the target database and creates required table to track the versions. All script files in `_init` directory will be executed. The order of execution is as follows `_init`,`_pre`,`vx.xx`,`_draft`,`_post`. Several variations on how we can run migration are listed below.
 
- - `-a | --auto-create-db`<br/>
-    Runs migration using connection string from environment variable `YUNIQL_CONNECTION_STRING`.<br/>
+ - `-a | --auto-create-db`
+ 
+    Runs migration using connection string from environment variable `YUNIQL_CONNECTION_STRING`.
     Auto-create target database if not exists.
 
- - `-c "<value>" | --connection-string "<value>"`<br/>
+
+ - `-c "<value>" | --connection-string "<value>"`
     Runs migration using the specified connection string.
 
- - `-p c:\temp\demo | --path c:\temp\demo`<br/>
+ - `-p c:\temp\demo | --path c:\temp\demo`
+
     Runs migration from target directory.
 
- - `-t v1.05 | --target-version v1.05`<br/>
+ - `-t v1.05 | --target-version v1.05`
+
     Runs migration only up to the version `v1.05` skipping `v1.06` or later.
 
- - `-k "<key>=<value>,<key>=<value>" | --token "<key>=<value>,<key>=<value>"`<br/>
+ - `-k "<key>=<value>,<key>=<value>" | --token "<key>=<value>,<key>=<value>"`
+
     Replace each tokens in each script file. This is very helful when you have environment specific sql-statements such as cross-server queries where database names are suffixed by the environment.
 
- - `--delimiter ";"`<br/>
+ - `--delimiter ";"`
+
     Runs migration using `;` as CSV file delimiter.
 
- - `-d | --debug`<br/>
+ - `-d | --debug`
+
     Runs migration with `DEBUG` tracing enabled.
 
- - `--platform "postgresql"`<br/>
+ - `--platform "postgresql"`
+
     Runs migration in PostgreSql database.
 
 ##### <mark>yuniql verify</mark>
