@@ -9,7 +9,7 @@ toc = true
 
 Yuniql organizes database schema version using series of ordinary directories and SQL files. Several utility directories and files are also included in default structure to support pre and post migration tasks. A typical baseline structure is described below and migration follows this order `_init [only on first-run]`,`_pre`,`v0.00`,`v.x.xx`,`vx.xx+1`,`_draft`,`_post`.
 
-<img src="https://github.com/rdagumampan/yuniql/raw/master/assets/wiki-how-it-works-dir.png" width=700>
+<img src="https://github.com/rdagumampan/yuniql/raw/master/assets/wiki-how-it-works-dir.png" width=700/>
 
 Developers and DBAs can work in these sequence:
 
@@ -58,12 +58,14 @@ Inspects the target database and creates required table to track the versions. A
 
 ##### <mark>yuniql verify</mark>
 ---
+
 Checks if all your versions can be executed without errors. It runs through all the non-versioned script folders (except `_init`) and all migration steps that `yuninql run` takes but without committing the transaction. All changes are rolled-back after a successful verification run.
 
 >NOTE: Because it relies on an existing database, you can only use `verify` on database already baselined or versioned.
 
 ##### <mark>yuniql info</mark>
 ---
+
 Shows all version currently present in the target database.
 
 ##### <mark>yuniql erase</mark>
