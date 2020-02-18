@@ -56,12 +56,13 @@ Identifies the latest version locally and increment the minor version with the f
 Inspects the target database and creates required table to track the versions. All script files in `_init` directory will be executed. The order of execution is as follows `_init`,`_pre`,`vx.xx`,`_draft`,`_post`. Several variations on how we can run migration are listed below.
 
  - `-a | --auto-create-db`
- 
+
     Runs migration using connection string from environment variable `YUNIQL_CONNECTION_STRING`.
     Auto-create target database if not exists.
 
 
  - `-c "<value>" | --connection-string "<value>"`
+ 
     Runs migration using the specified connection string.
 
  - `-p c:\temp\demo | --path c:\temp\demo`
