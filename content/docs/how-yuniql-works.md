@@ -25,13 +25,13 @@ Creates baseline directory structure that serves as your database migration work
 
 | Dir / File | Usage Description | Execution |
 | --- | --- | --- |
-| *_init* | Initialization scripts directory. <br>Executed the first time `yuniql run` is issued|Executed once |
-| *_pre* | Pre migration scripts directory. <br>Executed every time before any version. | Every migration run |
-| *v0.00* | Baseline scripts directory. <br>Executed when `yuniql run`. | Executed once |
-| *_draft* | Scripts in progress directory. <br>Scripts that you are currently working and have not moved to specific version directory yet. <br>Executed every time after the latest version. | Every migration run |
-| *_post* | Post migration scripts directory. <br>Executed every time and always the last batch to run. | Every migration run |
-| *_erase* | Database cleanup scripts directory. <br>Executed once only when `yuniql erase` is issued. | Executed on demand |
-| *Dockerfile* | A template docker file to run your migration. <br>Uses docker base images with `yuniql` installed.| Executed on `docker build` |
+| *_init* | Initialization scripts directory. <br/>Executed the first time `yuniql run` is issued|Executed once |
+| *_pre* | Pre migration scripts directory. <br/>Executed every time before any version. | Every migration run |
+| *v0.00* | Baseline scripts directory. <br/>Executed when `yuniql run`. | Executed once |
+| *_draft* | Scripts in progress directory. <br/>Scripts that you are currently working and have not moved to specific version directory yet. <br/>Executed every time after the latest version. | Every migration run |
+| *_post* | Post migration scripts directory. <br/>Executed every time and always the last batch to run. | Every migration run |
+| *_erase* | Database cleanup scripts directory. <br/>Executed once only when `yuniql erase` is issued. | Executed on demand |
+| *Dockerfile* | A template docker file to run your migration. <br/>Uses docker base images with `yuniql` installed.| Executed on `docker build` |
 | *README.md* | A template README file.| |
 | *.gitignore* | A template git ignore file to skip yuniql.exe from being committed.| |
 
@@ -39,42 +39,42 @@ Creates baseline directory structure that serves as your database migration work
 ---
 Identifies the latest version locally and increment the minor version with the format `v{major}.{minor}`. The command just helps reduce human errors and this can also be done manually.
 
-- `-m | --minor`<br>
+- `-m | --minor`<br/>
     Default option. Increments major version by creating `vx.xx+1` folder
 
-- `-M | --major`<br>
+- `-M | --major`<br/>
     Increments minor version by creating `vx+1.xx` folder
 
-- `-f | --file <file-name.sql>`<br>
+- `-f | --file <file-name.sql>`<br/>
     Creates an empty sql file in the created major or minor version
 
 ##### <mark>yuniql run</mark>
 ---
 Inspects the target database and creates required table to track the versions. All script files in `_init` directory will be executed. The order of execution is as follows `_init`,`_pre`,`vx.xx`,`_draft`,`_post`. Several variations on how we can run migration are listed below.
 
- - `-a | --auto-create-db`<br>
-    Runs migration using connection string from environment variable `YUNIQL_CONNECTION_STRING`.<br>
+ - `-a | --auto-create-db`<br/>
+    Runs migration using connection string from environment variable `YUNIQL_CONNECTION_STRING`.<br/>
     Auto-create target database if not exists.
 
- - `-c "<value>" | --connection-string "<value>"`<br>
+ - `-c "<value>" | --connection-string "<value>"`<br/>
     Runs migration using the specified connection string.
 
- - `-p c:\temp\demo | --path c:\temp\demo`<br>
+ - `-p c:\temp\demo | --path c:\temp\demo`<br/>
     Runs migration from target directory.
 
- - `-t v1.05 | --target-version v1.05`<br>
+ - `-t v1.05 | --target-version v1.05`<br/>
     Runs migration only up to the version `v1.05` skipping `v1.06` or later.
 
- - `-k "<key>=<value>,<key>=<value>" | --token "<key>=<value>,<key>=<value>"`<br>
+ - `-k "<key>=<value>,<key>=<value>" | --token "<key>=<value>,<key>=<value>"`<br/>
     Replace each tokens in each script file. This is very helful when you have environment specific sql-statements such as cross-server queries where database names are suffixed by the environment.
 
- - `--delimiter ";"`<br>
+ - `--delimiter ";"`<br/>
     Runs migration using `;` as CSV file delimiter.
 
- - `-d | --debug`<br>
+ - `-d | --debug`<br/>
     Runs migration with `DEBUG` tracing enabled.
 
- - `--platform "postgresql"`<br>
+ - `--platform "postgresql"`<br/>
     Runs migration in PostgreSql database.
 
 ##### <mark>yuniql verify</mark>
