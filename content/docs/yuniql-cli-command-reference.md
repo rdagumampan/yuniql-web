@@ -1,44 +1,26 @@
 +++
-title = "How Yuniql Works"
-description = "yuniql is data platform devops tool. Understand the design principles and internals here."
-bref = "yuniql is data platform devops tool. Schema versioning and database migration is one of its core capabilities. Understand its internals here."
+title = "Yuniql CLI Command Reference"
+description = "User Yuniql rich CLI commands and parameters for running migrations locally and on server."
+bref = "Command Line Interface (CLI) commands and parameters."
 weight = 10
 draft = false
 toc = false
 +++
 
-Yuniql organizes database schema version using series of ordinary directories and SQL files. Several utility directories and files are also included in default structure to support pre and post migration tasks. A typical baseline structure is described below and migration follows this order `_init [only on first-run]`,`_pre`,`v0.00`,`v.x.xx`,`vx.xx+1`,`_draft`,`_post`.
-
-<img src="https://github.com/rdagumampan/yuniql/raw/master/assets/wiki-how-it-works-dir.png" width=700/>
-
-Developers and DBAs can work in these sequence:
-
-- `yuniql init` / initializes db project structure
-- `yuniql vnext` / increment version
-- `yuniql run` / run migrations
-- `yuniql info` / show existing versions
-
-### Yuniql CLI Command Reference
-
-#### **`yuniql init`**
+##### **`yuniql init`**
 ---
 Creates baseline directory structure that serves as your database migration workspace. Commit this into your preferred source control platform such as `git`, `tfs vc` or `svn`. 
+```shell
+yuniql init [-p|--path] [-d|--debug]
+```
 
-| Dir / File | Usage Description | Execution |
-| --- | --- | --- |
-| *_init* | Initialization scripts directory. <br/>Executed the first time `yuniql run` is issued|Executed once |
-| *_pre* | Pre migration scripts directory. <br/>Executed every time before any version. | Every migration run |
-| *v0.00* | Baseline scripts directory. <br/>Executed when `yuniql run`. | Executed once |
-| *_draft* | Scripts in progress directory. <br/>Scripts that you are currently working and have not moved to specific version directory yet. <br/>Executed every time after the latest version. | Every migration run |
-| *_post* | Post migration scripts directory. <br/>Executed every time and always the last batch to run. | Every migration run |
-| *_erase* | Database cleanup scripts directory. <br/>Executed once only when `yuniql erase` is issued. | Executed on demand |
-| *Dockerfile* | A template docker file to run your migration. <br/>Uses docker base images with `yuniql` installed.| Executed on `docker build` |
-| *README.md* | A template README file.| |
-| *.gitignore* | A template git ignore file to skip yuniql.exe from being committed.| |
-
-#### **`yuniql vnext`**
+##### **`yuniql vnext`**
 ---
 Identifies the latest version locally and increment the minor version with the format `v{major}.{minor}`. The command just helps reduce human errors and this can also be done manually.
+
+```shell
+yuniql vnext [-p|--path] [-M|--major] [-m|--minor] [-f|--file] [-d|--debug] 
+```
 
 - `-m | --minor`
 
@@ -52,9 +34,14 @@ Identifies the latest version locally and increment the minor version with the f
 
     Creates an empty sql file in the created major or minor version
 
-#### **`yuniql run`**
+##### **`yuniql run`**
 ---
 Inspects the target database and creates required table to track the versions. All script files in `_init` directory will be executed. The order of execution is as follows `_init`,`_pre`,`vx.xx`,`_draft`,`_post`. Several variations on how we can run migration are listed below.
+
+```shell
+yuniql run [-p|--path] [-c|--connection-string] [-a|--auto-create-db] [-t|--target-version] 
+    [-k|--token] [--delimeter] [--platform] [--command-timeout] [--environment] [-d|--debug]
+```
 
  - `-p "c:\temp\demo" | --path "c:\temp\demo"`
 
@@ -100,26 +87,36 @@ Inspects the target database and creates required table to track the versions. A
 
     Shows the CLI command reference on screen.
 
-#### **`yuniql verify`**
+##### **`yuniql verify`**
 ---
-
 Checks if all your versions can be executed without errors. It runs through all the non-versioned script folders (except `_init`) and all migration steps that `yuninql run` takes but without committing the transaction. All changes are rolled-back after a successful verification run.
+
+```shell
+yuniql verify [-p|--path] [-c|--connection-string] [-t|--target-version] 
+    [-k|--token] [--delimeter] [--platform] [--command-timeout] [--environment] [-d|--debug]
+```
 
 >NOTE: Because it relies on an existing database, you can only use `verify` on database already baselined or versioned.
 
-#### **`yuniql info`**
+##### **`yuniql info`**
 ---
-
 Shows all version currently present in the target database.
 
-#### **`yuniql erase`**
----
+```shell
+yuniql info [-p|--path] [-c|--connection-string] [--platform] [--command-timeout] [-d|--debug]
+```
 
+##### **`yuniql erase`**
+---
 Discovers and executes all scripts placed in the `_erase` directory. This is especially useful in dev and test environment where teams cannot auto-create new database each test case. The execution is immutable and enclosed in single transaction. The list of objects to drop, the order of when they will be dropped must be manually prepared. 
+
+```shell
+yuniql erase [-p|--path] [-c|--connection-string]  [-k|--token] [--force] [--platform] [--command-timeout] [-d|--debug]
+```
 
 >WARNING: Be very careful when using this function as it has SEVERE consequences when run in PRODUCTION. Make sure to remove this pipeline task if you are cloning CI/CD pipelines from your DevOps tool.
 
-#### **`yuniql version`**
+##### **`yuniql version`**
 
 Shows the current version of yuniql CLI running.
 
