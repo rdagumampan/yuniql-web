@@ -1,6 +1,6 @@
 +++
 title = "Yuniql CLI Command Reference"
-description = "User Yuniql rich CLI commands and parameters for running migrations locally and on server."
+description = "Rich CLI commands and parameters for running migrations locally and on continuous integration server."
 bref = "Command Line Interface (CLI) commands and parameters."
 weight = 10
 draft = false

@@ -12,7 +12,7 @@ There are two industry approach to versioning your relational database. These ar
 Yuniql is a database-first migration engine. This is article is based on an assumption that you have preference on *Database-first* strategy.
 
 #### Baselining strategies in database-first development
-Versioning your database begins with a *Baseline*. A Baseline version, is the `v0.00` of your database schema and master data. A baseline version helps create full visibility of your schema evolution. We identified two approaches to baselining databases:
+Versioning your database begins with a *Baseline*. A Baseline version, is the `v0.00` of your database schema and master data. A baseline version helps create full visibility of your schema evolution. That is from its conception to latest available change applied in DB. There are at least three approaches to baselining databases:
 1. Visual model-first (new database projects)
 2. Sql script-first (new database projects)
 3. Sql script-dump from existing databases
