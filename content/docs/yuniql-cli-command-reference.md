@@ -21,7 +21,6 @@ Creates baseline directory structure that serves as your database migration work
 ```shell
 yuniql init [-p|--path] [-d|--debug] [--help]
 ```
-<br/>
 
 - `-p "c:\temp\demo" | --path "c:\temp\demo"`
 
@@ -42,7 +41,6 @@ Identifies the latest version locally and increments the minor version with the 
 ```shell
 yuniql vnext [-p|--path] [-M|--major] [-m|--minor] [-f|--file] [-d|--debug] 
 ```
-<br/>
 
 - `-p "c:\temp\demo" | --path "c:\temp\demo"`
 
@@ -76,7 +74,6 @@ Inspects the target database and creates required table to track the versions. A
 yuniql run [-p|--path] [-c|--connection-string] [-a|--auto-create-db] [-t|--target-version] 
     [-k|--token] [--delimeter] [--platform] [--command-timeout] [--environment] [-d|--debug]
 ```
-<br/>
 
 - `-p "c:\temp\demo" | --path "c:\temp\demo"`
 
@@ -130,7 +127,6 @@ Checks if all your versions can be executed without errors. It runs through all 
 yuniql verify [-p|--path] [-c|--connection-string] [-t|--target-version] 
     [-k|--token] [--delimeter] [--platform] [--command-timeout] [--environment] [-d|--debug]
 ```
-<br/>
 
 >NOTE: Because it relies on an existing database, you can only use `verify` on database already baselined or versioned.
 
@@ -141,7 +137,6 @@ Shows all version currently present in the target database.
 ```shell
 yuniql info [-p|--path] [-c|--connection-string] [--platform] [--command-timeout] [-d|--debug]
 ```
-<br/>
 
 - `-p "c:\temp\demo" | --path "c:\temp\demo"`
 
@@ -176,7 +171,6 @@ Discovers and executes all scripts placed in the `_erase` directory. This is esp
 ```shell
 yuniql erase [-p|--path] [-c|--connection-string]  [-k|--token] [--platform] [--command-timeout] [--force] [-d|--debug]
 ```
-<br/>
 
 - `-p "c:\temp\demo" | --path "c:\temp\demo"`
 
@@ -208,11 +202,11 @@ yuniql erase [-p|--path] [-c|--connection-string]  [-k|--token] [--platform] [--
 
 ##### **`yuniql version`**
 
+Shows the current version of yuniql CLI running.
+
 ```shell
 yuniql version
 ```
-
-Shows the current version of yuniql CLI running.
 
 ### Learn further
 
