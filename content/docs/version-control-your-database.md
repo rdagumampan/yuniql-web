@@ -17,7 +17,7 @@ Versioning your database begins with a *Baseline*. A Baseline version, is the `v
 2. Sql script-first (new database projects)
 3. Sql script-dump from existing databases
 
-##### Strategy 1: Visual model-first
+##### Visual Model-First
 Typically, we don't start our databases by hand-writing SQL scripts. Instead, we use advanced visual modelling tools such as SSMS Table Designer, SSDT, IDERA, Sparx EA and [similar tools](https://www.holistics.io/blog/top-5-free-database-diagram-design-tools) to create [Entity-Relationship Diagrams (ERD)](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model). Especially for larger DW and RDBMS projects, the scripts comes last as a result of good-enough ERD model. The scripts are then generated from the tool and this would make a sufficient starting point for baselining the db schema.
 
 In this approach, you can generate all scripts from tool and place all scripts and directories inside `v0.00`. yuniql will discover and execute scripts in all directories and subdirectories.
@@ -33,7 +33,7 @@ dir /O:N
 10/21/2019  22:41    <DIR>          views
 ```
 
-##### Strategy 2: SqlScript-first
+##### SqlScript-First
 For smaller databases especially those attached to microservices, the model is relatively small and tables can be scripted on the go. Its simple and you can manually place all your scripts in order in `v0.00`. Scripts are executed in order by file name.
 
 ```shell
@@ -46,7 +46,7 @@ dir /O:N
 10/21/2019  22:41                   03-initialize-tables.sql
 ```
 
-##### Strategy 3: Sql Script Dump
+##### Sql Script Dump
 
 For majority of use case, the database is already existing and running in Production. You can baseline your database by extracting and generating a baseline schema, supporting scripts and master data to produce a local database that is as-close as possible to Production but without the transaction data.
 
