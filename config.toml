@@ -1,4 +1,4 @@
-baseURL = "https://rdagumampan.github.io/yuniql.io"
+baseURL = "https://yuniql.io"
 languageCode = "en-us"
 title = "YUNIQL"
 theme = "kube-yuniql"
