@@ -1,11 +1,13 @@
 +++
-title = "Version-control Your Database"
-description  = "Startegies for versioning your database for more effective change control process."
-bref  = "Startegies for versioning your database for more effective change control process."
+title = "Baseline Your Database"
+description  = "Prepare your database version v0.00. Learn strategies and tools to baseline your existing database."
+bref  = "Prepare your database version v0.00. Learn strategies and tools to baseline your existing database."
 weight = 11
 draft = false
 toc = false
 +++
+
+**DRAFT**
 
 There are two industry approach to versioning your relational database. These are *Database-first* and *Code-first*. Arguments on both are valid and we have great literature online on [this debate](https://www.google.com/search?q=database+first+vs+code+first). 
 

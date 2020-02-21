@@ -7,19 +7,35 @@ draft = false
 toc = false
 +++
 
-Yuniql organizes database schema version using series of ordinary directories and SQL files. Several utility directories and files are also included in default structure to support pre and post migration tasks. A typical baseline structure is described below and migration follows this order `_init [only on first-run]`,`_pre`,`v0.00`,`v.x.xx`,`vx.xx+1`,`_draft`,`_post`.
+**DRAFT**
 
-<img src="https://github.com/rdagumampan/yuniql/raw/master/assets/wiki-how-it-works-dir.png" width=700/>
+Yuniql organizes the database migration steps in series of directories and files. Each directory represents an atomic version of your database executed in an all-or-nothing fashion. Utility directories are also created to cover pre and post migration activities. A typical starter project workspace looks like this.
 
-### Learn further
+```shell
+C:\temp\sqlserver-sample>dir
 
-* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
-* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
-* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
-* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
-* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
-* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
-* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
+Directory of C:\temp\sqlserver-sample
+01/26/2020  09:22    <DIR>          .
+01/26/2020  09:22    <DIR>          ..
+11/03/2019  16:58                35 .gitignore
+01/26/2020  09:30                67 Dockerfile
+01/26/2020  09:22               782 README.md
+11/10/2019  10:43    <DIR>          v0.00
+11/10/2019  10:41    <DIR>          _draft
+11/10/2019  10:54    <DIR>          _erase
+11/10/2019  10:42    <DIR>          _init
+11/10/2019  10:42    <DIR>          _post
+11/10/2019  10:43    <DIR>          _pr.
+```
+
+When `yuniql run` is issued the first time, it inspects the target database and creates required table to track the versions. All script files in `_init` directory will be executed only this time. The order of execution is as follows `_init`, `_pre`, `vx.xx`, `vxx.xx+N`, `_draft` , `_post`. A successful first-run would have tracking the table filled-up this way.
+
+```sql
+SELECT * FROM __YuniqlDbVersion;
+
+SequenceId	Version	AppliedOnUtc	        AppliedByUser	            AppliedByTool	AppliedByToolVersion
+1	        v0.00	2020-02-21 06:17:08.147	DESKTOP-ULR8GDO\rdagumampan	yuniql-cli	    v0.350.0.0	NULL
+```
 
 #### Found bugs?
 
