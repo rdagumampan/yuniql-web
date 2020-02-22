@@ -121,6 +121,11 @@ When versioning an existing database, it may help to organize the scripts into c
 * [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
 * [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md#" >}})
 
+#### Credits
+
+*  Original diagram and design inspirations are from Evololutionary Database Design with Martin Fowler and Pramod Sadalage
+https://www.martinfowler.com/articles/evodb.html
+
 #### Found bugs?
 
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
