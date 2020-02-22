@@ -2,7 +2,7 @@
 title = "Baseline Your Database"
 description  = "Prepare your database version v0.00. Learn strategies and tools to baseline your existing database."
 bref  = "Prepare your database version v0.00. Learn strategies and tools to baseline your existing database."
-weight = 11
+weight = 12
 draft = false
 toc = false
 +++
@@ -85,11 +85,9 @@ The are certainly other ways to baseline your database. As long as they they can
 
 ### Learn further
 
-* [Bulk Import CSV Master Data]({{ ref < "/docs/bulk-import-csv-master-data.md" >})
+* [Bulk Import CSV Master Data]({{< ref "/docs/bulk-import-csv-master-data.md" >}})
 * [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
-* [Environment-aware Migration]({{ ref < "/docs/environment-aware-scripts.md" >})
-* [Database DevOps Strategies]({{ ref < "/docs/database-devops-strategies.md" >})
-
+* [Environment-aware Migration]({{< ref "/docs/environment-aware-scripts.md" >}})
 
 ##### Found bugs?
 

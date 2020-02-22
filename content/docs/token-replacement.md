@@ -44,9 +44,9 @@ yuniql run -k "token-key1=token-value1" -k "token-key2=token-value2" -c "<you-de
 * [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
 * [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
 * [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
-* [Yuniql CLI Command Reference]({{ ref < "/docs/yuniql-cli-command-reference.md" >})
-* [Bulk Import CSV Master Data]({{ ref < "/docs/bulk-import-csv-master-data.md" >})
-* [Environment-aware Migration]({{ ref < "/docs/environment-aware-scripts.md" >})
+* [Yuniql CLI Command Reference]({{< ref "/docs/yuniql-cli-command-reference.md" >}})
+* [Bulk Import CSV Master Data]({{< ref "/docs/bulk-import-csv-master-data.md" >}})
+* [Environment-aware Migration]({{< ref "/docs/environment-aware-scripts.md" >}})
 
 #### Found bugs?
 

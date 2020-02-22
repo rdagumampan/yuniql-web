@@ -75,10 +75,10 @@ Erases the target database objects (tables, procedures, functions, and others) u
 * [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
 * [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
 * [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
-* [Yuniql CLI Command Reference]({{ ref < "/docs/yuniql-cli-command-reference.md" >})
-* [Bulk Import CSV Master Data]({{ ref < "/docs/bulk-import-csv-master-data.md" >})
+* [Yuniql CLI Command Reference]({{< ref "/docs/yuniql-cli-command-reference.md" >}})
+* [Bulk Import CSV Master Data]({{< ref "/docs/bulk-import-csv-master-data.md" >}})
 * [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
-* [Environment-aware Migration]({{ ref < "/docs/environment-aware-scripts.md" >})
+* [Environment-aware Migration]({{< ref "/docs/environment-aware-scripts.md" >}})
 
 #### Found bugs?
 

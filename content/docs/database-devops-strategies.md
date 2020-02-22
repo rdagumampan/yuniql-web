@@ -3,7 +3,7 @@ title = "Database DevOps Strategies"
 description  = "Approaches to make development and database change management first-class citizens of your release process."
 bref  = "Approaches to make development and database change management first-class citizens of your release process."
 weight = 12
-draft = false
+draft = true
 toc = false
 +++
 
@@ -63,10 +63,10 @@ Database developers can follow these CLI sequence calls to prepare local db vers
 
 #### Learn further
 
-* [Bulk Import CSV Master Data]({{ ref < "/docs/bulk-import-csv-master-data.md" >})
+* [Bulk Import CSV Master Data]({{< ref "/docs/bulk-import-csv-master-data.md" >}})
 * [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
-* [Environment-aware Migration]({{ ref < "/docs/environment-aware-scripts.md" >})
-* [Baseline Database]({{ ref < "/docs/baseline-database.md" >})
+* [Environment-aware Migration]({{< ref "/docs/environment-aware-scripts.md" >}})
+* [Baseline Database]({{< ref "/docs/baseline-database.md" >}})
 
 #### Found bugs?
 

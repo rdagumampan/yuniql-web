@@ -72,7 +72,7 @@ SELECT * FROM [dbo].[Visitor]
 * [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
 * [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
 * [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
-* [Environment-aware Migration]({{ ref < "/docs/environment-aware-scripts.md" >})
+* [Environment-aware Migration]({{< ref "/docs/environment-aware-scripts.md" >}})
 
 #### Found bugs?
 
