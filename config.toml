@@ -23,6 +23,11 @@ Paginate = 4
     url = "/docs/how-yuniql-works/"
 
 [[menu.main]]
-    name = "Report issue"
+    name = "Documentation"
     weight = 3
+    url = "/docs"
+
+[[menu.main]]
+    name = "Report issue"
+    weight = 4
     url = "https://github.com/rdagumampan/yuniql/issues/new"

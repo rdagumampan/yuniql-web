@@ -84,6 +84,13 @@ There are situations when scripts are conditional to the environment they are ex
 
 A baseline database includes both schema and data. While you can always write scripts to seed your data, it could be easier to bulk load them using CSV files. Yuniql discovers CSV files in the directories and load into tables bearing the name of the file. [More on this...]({{<ref "/docs/bulk-import-csv-master-data.md">}}).
 
+#### Learn further
+
+* [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
+* [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
+* [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
+* [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
+
 #### Found bugs?
 
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
