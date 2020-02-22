@@ -22,7 +22,7 @@ When you call `docker build`, we pull the base image containing the nightly buil
 #### Prepare database migration project
 
 Install yuniql CLI
-Install yuniql CLI with Chocolatey or use alternative ways listed here https://yuniql.io/docs/install-yuniql
+Install yuniql CLI with Chocolatey or use alternative ways listed here [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}})
 
 ```shell
 choco install yuniql --version 0.350.0
@@ -143,12 +143,13 @@ COPY . ./db
 
 ### Learn further
 
-* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
-* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
-* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
-* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
-* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
-* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
+* [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
+* [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
+* [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
+* [Yuniql CLI Command Reference]({{ ref < "/docs/yuniql-cli-command-reference.md" >})
+* [Bulk Import CSV Master Data]({{ ref < "/docs/bulk-import-csv-master-data.md" >})
+* [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
+* [Environment-aware Migration]({{ ref < "/docs/environment-aware-scripts.md" >})
 
 #### Found bugs?
 

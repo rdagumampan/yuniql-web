@@ -85,13 +85,11 @@ The are certainly other ways to baseline your database. As long as they they can
 
 ### Learn further
 
-* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
-* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
-* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
-* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
-* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
-* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
-* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
+* [Bulk Import CSV Master Data]({{ ref < "/docs/bulk-import-csv-master-data.md" >})
+* [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
+* [Environment-aware Migration]({{ ref < "/docs/environment-aware-scripts.md" >})
+* [Database DevOps Strategies]({{ ref < "/docs/database-devops-strategies.md" >})
+
 
 ##### Found bugs?
 

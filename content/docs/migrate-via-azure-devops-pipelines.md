@@ -14,7 +14,7 @@ Run your database migration from Azure DevOps Pipelines. The tasks downloads pac
 #### Pre-requisites
 
 * Works only with Windows-based agents for now
-* Requires a yuniql compliant directory structure. To create this structure you may [install yuniql-cli](https://yuniql.io/docs/install-yuniql), issue `yuniql init`, commit to a git repository and use the repository as input artifact in the pipelines. You may also copy our [existing samples](https://github.com/rdagumampan/yuniql/tree/master/samples) for your target database platform and commit to your own repo.
+* Requires a yuniql compliant directory structure. To create this structure you may [install yuniql-cli]({{< ref "/docs/install-yuniql.md" >}}), issue `yuniql init`, commit to a git repository and use the repository as input artifact in the pipelines. You may also copy our [existing samples](https://github.com/rdagumampan/yuniql/tree/master/samples) for your target database platform and commit to your own repo.
 
 #### Azure DevOps Pipelines (YAML)
 This sample uses a SqlServer Database project available in GitHub and deploy the database into an Azure SQL Database. See https://github.com/rdagumampan/yuniql/tree/master/samples/basic-sqlserver-sample.
@@ -72,12 +72,13 @@ Erases the target database objects (tables, procedures, functions, and others) u
 
 ### Learn further
 
-* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
-* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
-* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
-* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
-* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
-* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
+* [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
+* [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
+* [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
+* [Yuniql CLI Command Reference]({{ ref < "/docs/yuniql-cli-command-reference.md" >})
+* [Bulk Import CSV Master Data]({{ ref < "/docs/bulk-import-csv-master-data.md" >})
+* [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
+* [Environment-aware Migration]({{ ref < "/docs/environment-aware-scripts.md" >})
 
 #### Found bugs?
 

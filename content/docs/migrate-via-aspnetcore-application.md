@@ -71,12 +71,13 @@ dotnet run --debug
 
 ### Learn further
 
-* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
-* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
-* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
-* [Bulk Import CSV Master Data](https://yuniql.io/docs/bulk-import-csv-master-data/)
-* [Use Token Replacement](https://yuniql.io/docs/token-replacement/)
-* [Environment-aware Migration](https://yuniql.io/docs/environment-aware-scripts/)
+* [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
+* [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
+* [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
+* [Yuniql CLI Command Reference]({{ ref < "/docs/yuniql-cli-command-reference.md" >})
+* [Bulk Import CSV Master Data]({{ ref < "/docs/bulk-import-csv-master-data.md" >})
+* [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
+* [Environment-aware Migration]({{ ref < "/docs/environment-aware-scripts.md" >})
 
 #### Found bugs?
 

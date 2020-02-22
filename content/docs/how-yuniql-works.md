@@ -1,7 +1,7 @@
 +++
 title = "How Yuniql Works"
 description = "Understand the design principles, ways of working and internals of yuniql."
-bref = "yuniql is data platform devops tool. Schema versioning and database migration is one of its core capabilities. Understand its internals here."
+bref = "Understand the design principles, the ways of working and internals of yuniql."
 weight = 10
 draft = false
 toc = false

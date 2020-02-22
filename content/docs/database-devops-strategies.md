@@ -61,6 +61,16 @@ Database developers can follow these CLI sequence calls to prepare local db vers
 - `yuniql info` / shows existing versions applied
 - `yuniql erase` / cleans up when done local testing
 
+#### Learn further
+
+* [Bulk Import CSV Master Data]({{ ref < "/docs/bulk-import-csv-master-data.md" >})
+* [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
+* [Environment-aware Migration]({{ ref < "/docs/environment-aware-scripts.md" >})
+* [Baseline Database]({{ ref < "/docs/baseline-database.md" >})
+
+#### Found bugs?
+
+Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
 
 <!-- ![](https://github.com/rdagumampan/yuniql/raw/master/assets/wiki-evodb-01.png)
 
@@ -68,3 +78,4 @@ Database developers can follow these CLI sequence calls to prepare local db vers
 
 >Image inspired by [Evolutionary Database Design](https://www.martinfowler.com/articles/evodb.html) by Martin Fowler and Pramod Sadalage. -->
 <!-- 
+

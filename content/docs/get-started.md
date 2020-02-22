@@ -8,7 +8,7 @@ toc = false
 +++
 
 #### Install yuniql
-Install yuniql CLI with Chocolatey or use alternative ways listed here https://yuniql.io/docs/install-yuniql
+Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}}]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
 
 ```shell
 choco install yuniql --version 0.350.0
@@ -60,10 +60,10 @@ VisitorID   FirstName   LastName    Address  Email
 
 ### Learn further
 
-* [Migrate via ASP.NET Core](https://yuniql.io/docs/migrate-via-aspnetcore-application/)
-* [Migrate via Azure DevOps](https://yuniql.io/docs/migrate-via-azure-devops-pipelines/)
-* [Migrate via Docker Container](https://yuniql.io/docs/migrate-via-docker-container/)
-* [Migrate via Console Application](https://yuniql.io/docs/migrate-via-netcore-console-application/)
+* [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
+* [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
+* [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
+* [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
 
 ### Found bugs?
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
