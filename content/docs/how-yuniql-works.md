@@ -7,7 +7,9 @@ draft = false
 toc = false
 +++
 
-Yuniql is a Data Platform DevOps tool using migration-based and database-first delivery model. Migration-based means each changeset to the schema and seed data is set of carefully prepared scripts controlled with a version number. Database-first as it does not rely on application code to auto-generate the change scripts. Yuniql faciliate database DevOps with close integration with common DevOps tools such as Azure Pipelines and Docker.
+Yuniql is a Data Platform DevOps tool using migration-based and database-first delivery model. Migration-based means each changeset to the schema and seed data is set of carefully prepared scripts controlled with a version number. Database-first as it does not rely on application code to auto-generate the change scripts. Yuniql faciliates database DevOps with close integration with common DevOps tools such as Azure Pipelines and Docker.
+
+![yuniql-evodb](/images/evodb-01.png)
 
 At it's core, yuniql organizes the database migration steps in series of directories and files. Each directory represents an atomic version of your database executed in an all-or-nothing fashion. Utility directories are also created to cover pre and post migration activities. A typical starter project workspace looks like this.
 
