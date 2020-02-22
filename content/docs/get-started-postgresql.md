@@ -1,8 +1,8 @@
 +++
-title = "Get started!"
+title = "Get started with PosgtreSql and Others!"
 description = "Kick-start your database devops in 10 minutes. Install, run, verify."
 bref = "This is an express guide to using yuniql CLI. Yuniql allows developers and DBAs to run migration steps from CLI. Run these commands line by line via Command Prompt (CMD)."
-weight = 2
+weight = 3
 draft = false
 toc = false
 +++

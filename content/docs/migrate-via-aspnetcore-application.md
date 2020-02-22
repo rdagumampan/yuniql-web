@@ -2,7 +2,7 @@
 title = "Migrate via ASP.NET Core App"
 description = "Run your database migration when your ASP.NET Core app starts up."
 bref = "Run your database migration when your ASP.NET Core host service starts up. This ensures that database is always at latest compatible state before operating the service."
-weight = 2
+weight = 4
 draft = false
 toc = false
 +++

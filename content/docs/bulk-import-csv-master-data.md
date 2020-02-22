@@ -2,7 +2,7 @@
 title = "Bulk Import CSV Master Data"
 description = "Initiatlize lookup tables, load-up master data and create test samples during database deployment."
 bref = "Initiatlize lookup tables, load-up master data and create test samples during database deployment."
-weight = 7
+weight = 8
 draft = false
 toc = false
 +++

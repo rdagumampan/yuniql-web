@@ -2,7 +2,7 @@
 title = "Tips and Tricks"
 description = "Increase productivity, learnings from experience of others, known limitations and work around."
 bref = "Increase productivity, learnings from experience of others, known limitations and work around."
-weight = 10
+weight = 15
 draft = false
 toc = false
 +++
