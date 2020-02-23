@@ -1,6 +1,6 @@
 +++
 title = "Use Token Replacement"
-description = "Replace tokens within scripts files. An alternative way to achieve environment-aware script execution."
+description = "Replace tokens within scripts files. Use as alternative way to achieve environment-aware script execution."
 bref = "Replace tokens within scripts files. An alternative way to achieve environment-aware script execution."
 weight = 9
 draft = false

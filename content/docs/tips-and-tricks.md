@@ -1,7 +1,7 @@
 +++
 title = "Tips and Tricks"
-description = "Increase productivity, learnings from experience of others, known limitations and work around."
-bref = "Increase productivity, learnings from experience of others, known limitations and work around."
+description = "Increase productivity, learn from experience of others, discover work around to known limitations."
+bref = "Increase productivity, learn from experience of others, discover work around to known limitations."
 weight = 15
 draft = false
 toc = false

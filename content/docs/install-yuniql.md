@@ -10,7 +10,7 @@ toc = false
 #### Install with Chocolatey
 Downloads latest yuniql CLI with [Chocolatey](https://chocolatey.org/) package manager. See further instructions here https://chocolatey.org/install.
 ```shell
-choco install yuniql --version 0.350.0
+choco install yuniql
 yuniql version
 ```
 

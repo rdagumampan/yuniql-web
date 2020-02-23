@@ -1,6 +1,6 @@
 +++
 title = "Get started!"
-description = "Kick-start your database devops in 10 minutes. Install, run, verify."
+description = "Kick-start your database devops with yuniql CLI. Done in 10 mins max."
 bref = "This is an express guide to using yuniql CLI. Yuniql allows developers and DBAs to run migration steps from CLI. Run these commands line by line via Command Prompt (CMD)."
 weight = 2
 draft = false
@@ -11,7 +11,7 @@ toc = false
 Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}}]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
 
 ```shell
-choco install yuniql --version 0.350.0
+choco install yuniql
 ```
 
 #### Download samples
