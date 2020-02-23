@@ -69,6 +69,8 @@ dotnet build
 dotnet run --debug
 ```
 
+A working sample is available here for your reference https://github.com/rdagumampan/yuniql/tree/master/samples/sqlserver-aspnetcore-sample.
+
 ### Learn further
 
 * [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
