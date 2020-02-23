@@ -70,7 +70,7 @@ Erases the target database objects (tables, procedures, functions, and others) u
 
 >WARNING: This is helpful in Dev and Test. Be very careful and remove this task when cloning pipelines for Production!
 
-### Learn further
+#### Learn further
 
 * [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
 * [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})

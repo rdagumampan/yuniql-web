@@ -25,5 +25,5 @@ toc = false
 
 *** planned or being evaluated/developer/tested
 
-### Found bugs?
+#### Found bugs?
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).

@@ -25,8 +25,8 @@ cd c:\temp\yuniql-getstarted\samples\basic-postgresql-sample
 Set your db connection string in environment variable. This demo uses PostgreSql on docker container. For more connection string samples, visit https://www.connectionstrings.com/postgresql.
 
 ```shell
-docker run -e POSTGRES_USER=sa -e POSTGRES_PASSWORD=P@ssw0rd! -e POSTGRES_DB=yuniqldb -p 5432:5432 postgres
-SETX YUNIQL_CONNECTION_STRING "Host=localhost;Port=5432;Username=sa;Password=P@ssw0rd!;Database=yuniqldb"
+docker run -e POSTGRES_USER=sa -e POSTGRES_PASSWORD=P@ssw0rd! -e POSTGRES_DB=helloyuniql -p 5432:5432 postgres
+SETX YUNIQL_CONNECTION_STRING "Host=localhost;Port=5432;Username=sa;Password=P@ssw0rd!;Database=helloyuniql"
 ```
 
 #### Run migration

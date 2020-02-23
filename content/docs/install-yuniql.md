@@ -48,7 +48,7 @@ Use this for .NET Core Console App. Also usable for WebApp and Worker App but we
 dotnet add package Yuniql.Core
 ```
 
-### Learn further
+#### Learn further
 
 * [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
 * [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})

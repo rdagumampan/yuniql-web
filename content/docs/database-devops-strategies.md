@@ -7,7 +7,7 @@ draft = true
 toc = false
 +++
 
-**DRAFT**
+**DRAFT, WORK IN PROGRESS**
 
 Yuniql is a migration-based schema versioning and migration tool. Each migration step is a collection of change scripts and data placed in a version directory. There are also several utility directories to facilate pre and post migration tasks. A typical workflow starts with the developers/DBA creating an empty schema repository locally. 
 

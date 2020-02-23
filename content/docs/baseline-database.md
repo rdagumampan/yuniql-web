@@ -83,12 +83,12 @@ yuniql run -c <your-source-database-connection-string> -a
 
 The are certainly other ways to baseline your database. As long as they they can be validated in your target database, it can be organized in `v0.00` of your yuniql project and they will be discovered and executed. 
 
-### Learn further
+#### Learn further
 
 * [Bulk Import CSV Master Data]({{< ref "/docs/bulk-import-csv-master-data.md" >}})
 * [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
 * [Environment-aware Migration]({{< ref "/docs/environment-aware-scripts.md" >}})
 
-##### Found bugs?
+#### Found bugs?
 
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
