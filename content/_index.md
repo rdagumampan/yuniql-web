@@ -3,5 +3,5 @@ description = "YUNIQL (yuu-nee-kel) is an open source schema versioning and data
 
 title = "YUNIQL"
 draft = false
-tags = ["database","migration","sqlserver","devops"]
+tags = ["database","migration","sqlserver","posgresql", "mysql", "devops"]
 +++
