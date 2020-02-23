@@ -31,7 +31,7 @@ SETX YUNIQL_CONNECTION_STRING "Host=localhost;Port=5432;Username=sa;Password=P@s
 
 #### Run migration
 
-The following commands `yuniql` to discover the project directory, creates the target database if it doesn't exist and runs all migration steps in the order they are listed. These includes `.sql` files, directories, subdirectories, and csv files.
+Apply migrations with `yuniql run` and specify the target platform with `--platform`. Yuniql discovers the project directory, creates the target database if it doesn't exist and runs all migration steps in the order they are listed. These includes `.sql` files, directories, subdirectories, and csv files. Tokens are also replaced via `-k` parameters.
 
 ```shell
 cd c:\temp\yuniql-getstarted\samples\basic-postgresql-sample
@@ -55,6 +55,7 @@ The latest build supports SqlServer, PostgreSql and MySql. These have been verif
 
 ### Learn further
 
+* [Yuniql CLI Command Reference]({{< ref "/docs/yuniql-cli-command-reference.md" >}})
 * [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
 * [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
 * [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})

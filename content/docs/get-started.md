@@ -29,7 +29,7 @@ SETX YUNIQL_CONNECTION_STRING "Server=.\;Database=helloyuniql;Trusted_Connection
 ```
 
 #### Run migration<br>
-Apply migrations The following commands `yuniql` to discover the project directory, creates the target database if it doesn't exist and runs all migration steps in the order they are listed. These includes `.sql` files, directories, subdirectories, and csv files. Tokens are also replaced via `-k` parameters.
+Apply migrations with `yuniql run`. Yuniql discovers the project directory, creates the target database if it doesn't exist and runs all migration steps in the order they are listed. These includes `.sql` files, directories, subdirectories, and csv files. Tokens are also replaced via `-k` parameters.
 ```shell
 cd c:\temp\yuniql-getstarted\samples\basic-sqlserver-sample
 
@@ -48,8 +48,9 @@ Query tables with SSMS or your preferred SQL client
 #### Supported Platforms
 The latest build supports SqlServer, PostgreSql and MySql. These have been verified to run on latest version hosted in Azure SQL Database, Amazon RDS and Google CloudSQL.
 
-### Learn further
+#### Learn further
 
+* [Yuniql CLI Command Reference]({{< ref "/docs/yuniql-cli-command-reference.md" >}})
 * [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
 * [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
 * [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
