@@ -1,5 +1,5 @@
 +++
-title = "Work with PosgtreSql and Others!"
+title = "Work with PosgtreSql and Others"
 description = "A quick-start guide to PostgreSql and other platforms. Install, run, verify."
 bref = "A quick-start guide to working with PostgreSql and other platforms. Install, run, verify. 10-mins capped. Run these commands line by line via Command Prompt (CMD)."
 weight = 3

@@ -16,27 +16,30 @@ FROM [EMPLOYEEDB_DEV].[dbo].[Employee] E
 ORDER BY E.FirstName ASC
 ```
 
-To resolve this, let's pre-pare your script with token `%{ENV-DBNAME-SUFFIX}`. You can of course use whatever token name.
+To resolve this, let's pre-pare your script with token `${ENV-DBNAME-SUFFIX}`. You can of course use whatever token name.
 ```sql
 SELECT E.FirstName, E.LastName, E.Address, E.Email 
-FROM EMPLOYEEDB_%{ENV-DBNAME-SUFFIX}.[dbo].[Employee] E 
+FROM EMPLOYEEDB_${ENV-DBNAME-SUFFIX}.[dbo].[Employee] E 
 ORDER BY E.FirstName ASC
 ```
 
 Pass the tokens when you run migration
 
 ```shell
-yuniql run -k "ENV-DBNAME-SUFFIX=DEV" -c "<you-dev-connection-string>"
-yuniql run -k "ENV-DBNAME-SUFFIX=TEST" -c "<you-test-connection-string>"
-yuniql run -k "ENV-DBNAME-SUFFIX=PROD" -c "<you-prod-connection-string>"
+yuniql run -k "ENV-DBNAME-SUFFIX=DEV"
+yuniql run -k "ENV-DBNAME-SUFFIX=TEST"
+yuniql run -k "ENV-DBNAME-SUFFIX=PROD"
 ```
 
 You may also pass the tokens as a series of key/value pairs separated by comma. 
 
 ```shell
-yuniql run -k "token-key1=token-value1,token-key2=token-value2" -c "<you-dev-connection-string>"
-yuniql run -k "token-key1=token-value1" -k "token-key2=token-value2" -c "<you-dev-connection-string>"
+yuniql run -k "token-key1=token-value1,token-key2=token-value2"
+yuniql run -k "token-key1=token-value1" -k "token-key2=token-value2"
 ```
+
+A working sample is available here for your reference
+https://github.com/rdagumampan/yuniql/tree/master/samples/sqlserver-all-features-sample/v1.00
 
 #### Learn further
 

@@ -65,6 +65,9 @@ Verify if all is good
 SELECT * FROM [dbo].[Visitor]
 ```
 
+A working sample is available here for your reference
+https://github.com/rdagumampan/yuniql/tree/master/samples/sqlserver-all-features-sample/v0.00
+
 #### Learn further
 
 * [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
