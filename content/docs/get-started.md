@@ -8,7 +8,7 @@ toc = false
 +++
 
 #### Install yuniql
-Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}}]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
+Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}})
 
 ```shell
 choco install yuniql
