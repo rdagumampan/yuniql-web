@@ -20,10 +20,11 @@ git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql-getstarted
 cd c:\temp\yuniql-getstarted\samples\basic-sqlserver-sample
 ```
 
-Prepare your connection string in an environment variable. This demo uses local SQL Server default instance. For more connection string samples, visit https://www.connectionstrings.com/sql-server/.
+Prepare your connection string in an environment variable. This sample uses SQL Server on Docker container and you may also use your local default instance. For more connection string samples, visit https://www.connectionstrings.com/sql-server/.
 
 ```shell
-SETX YUNIQL_CONNECTION_STRING "Server=.\;Database=helloyuniql;Trusted_Connection=True;"
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd!" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+SETX YUNIQL_CONNECTION_STRING "Server=localhost,1400;Database=helloyuniql;User Id=SA;Password=P@ssw0rd!"
 ```
 
 Apply migrations with `yuniql run`. Yuniql discovers the project directory, creates the target database if it doesn't exist and runs all migration steps in the order they are listed. These includes `.sql` files, directories, subdirectories, and csv files. Tokens are also replaced via `-k` parameters.
