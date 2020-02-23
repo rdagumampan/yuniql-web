@@ -7,28 +7,25 @@ draft = false
 toc = false
 +++
 
-#### Install yuniql
 Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}})
 
 ```shell
 choco install yuniql
 ```
 
-#### Download samples
-Clone yuniql repo and play with several samples for sqlserver, postgresql, mysql and other platforms. Find your samples here https://github.com/rdagumampan/yuniql/tree/master/samples
+Download samples for Sql Server. Samples for sqlserver, postgresql and other platforms are available here https://github.com/rdagumampan/yuniql/tree/master/samples
+
 ```shell
 git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql-getstarted
 cd c:\temp\yuniql-getstarted\samples\basic-sqlserver-sample
 ```
 
-#### Prepare connection
-Set your db connection string in an environment variable. This demo uses local SQL Server instance. For more connection string samples, visit https://www.connectionstrings.com/sql-server/.
+Prepare your connection string in an environment variable. This demo uses local SQL Server default instance. For more connection string samples, visit https://www.connectionstrings.com/sql-server/.
 
 ```shell
 SETX YUNIQL_CONNECTION_STRING "Server=.\;Database=helloyuniql;Trusted_Connection=True;"
 ```
 
-#### Run migration<br>
 Apply migrations with `yuniql run`. Yuniql discovers the project directory, creates the target database if it doesn't exist and runs all migration steps in the order they are listed. These includes `.sql` files, directories, subdirectories, and csv files. Tokens are also replaced via `-k` parameters.
 ```shell
 cd c:\temp\yuniql-getstarted\samples\basic-sqlserver-sample
@@ -40,13 +37,11 @@ Version         Created                         CreatedBy
 v0.00           2019-11-03T16:29:36.0130000     DESKTOP-ULR8GDO\rdagumampan
 ```
 
-#### Verify results<br>
-Query tables with SSMS or your preferred SQL client
+Verify results. Query tables with SSMS or your preferred SQL client
 
 ![yuniql-sqlserver-migration](/images/get-started-sqlserver.png)
 
-#### Supported Platforms
-The latest build supports SqlServer, PostgreSql and MySql. These have been verified to run on latest version hosted in Azure SQL Database, Amazon RDS and Google CloudSQL.
+The latest build of yuniql supports SqlServer, PostgreSql and MySql. Integration tests are performed on instances hosted in Azure SQL Database, Amazon RDS and Google CloudSQL. See list of supported platforms [here]({{< ref "/docs/build-status.md" >}})
 
 #### Learn further
 
@@ -56,5 +51,5 @@ The latest build supports SqlServer, PostgreSql and MySql. These have been verif
 * [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
 * [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
 
-### Found bugs?
+#### Found bugs?
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
