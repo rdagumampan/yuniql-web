@@ -7,7 +7,7 @@ draft = false
 toc = false
 +++
 
-Master data and lookup tables almost comes natural as part of every database provisioning process. With this, you may prepare them in CSV files and yuniql will inspect them and bulk load into tables bearing same name as the CSV file. The following example demonstrates how to do this.
+Master data and lookup tables almost comes natural as part of every database provisioning process. To support this, you may prepare a series of CSV files in the version directory. When you call `yuniql run`, yuniql will discovers the CSV files and bulk load into tables bearing same name as the CSV file. The following example demonstrates how to do this.
 
 Install Yuniql CLI<br>
 [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}}).
@@ -23,7 +23,7 @@ yuniql init
 yuniql vnext
 ```
 
-Create script file `setup_tables.sql` on `v0.01`
+Create script file `setup_tables.sql` on `v0.01`.
 
 ```sql
 CREATE TABLE Visitor (
@@ -35,7 +35,7 @@ CREATE TABLE Visitor (
 );
 ```
 
-Create a `Visitor.csv` on version `v0.01`
+Create a `Visitor.csv` on version `v0.01`. If your target table has an schema, you can name the file with schem name such as `Registration.Visitor` where Registration is a schema.
 
 ```csv
 "VisitorID","FirstName","LastName","Address","Email"

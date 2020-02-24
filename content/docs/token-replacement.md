@@ -7,7 +7,7 @@ draft = false
 toc = false
 +++
 
-A series of key/value pairs of tokens can be passed to `yuniql`. During migration run, yuniql inspects all script files and replaces them. This is particulary useful in cases such as cross-database and linked-server queries where the databases and server names varies per environment.
+A series of key/value pairs of tokens can be passed to `yuniql`. During migration run, yuniql inspects all tokens in script files and replaces them. This is particulary useful in cases such as cross-database and linked-server queries where the databases and server names varies per environment.
 
 The following script would fail when run in TEST where `EMPLOYEEDB_DEV` database does not exists but `EMPLOYEEDB_TEST`.
 ```sql
@@ -37,6 +37,8 @@ You may also pass the tokens as a series of key/value pairs separated by comma.
 yuniql run -k "token-key1=token-value1,token-key2=token-value2"
 yuniql run -k "token-key1=token-value1" -k "token-key2=token-value2"
 ```
+
+> IMPORTANT: Tokens values are required parameters when at least one of script files is tokenized. Failure to get this token values from CLI or API will throw an exception and will fail the entire migration.
 
 A working sample is available here for your reference
 https://github.com/rdagumampan/yuniql/tree/master/samples/sqlserver-all-features-sample/v1.00
