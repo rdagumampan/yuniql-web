@@ -1,11 +1,13 @@
 +++
 title = "Migrate via Docker Container"
 description = "Run your database migration thru a Docker container with Yuniql runtime."
-bref = "Run your database migration thru a docker container. This is specially helpful on Linux environments and CI/CD pipelines running on Linux Agents as it facilitates your migration without having to worry any local installations or runtime dependencies."
+bref = "Streamline your migration execution with Docker images with yuniql built-in. Use Docker CLI to run your migrations in any Docker compatible host."
 weight = 6
 draft = false
 toc = false
 +++ 
+
+Run your database migration thru a Docker container. This is specially helpful on Linux environments and CI/CD pipelines running on Linux Agents as it facilitates your migration without having to worry any local installations or runtime dependencies. 
 
 When you run `yuniql init` command, a baseline directory structure will be created automatically. This includes a ready-to-use Dockerfile.
 
@@ -21,18 +23,18 @@ When you call `docker build`, we pull the base image containing the nightly buil
  
 #### Prepare database migration project
 
-Install yuniql CLI
-Install yuniql CLI with Chocolatey or use alternative ways listed here [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}})
+Install yuniql CLI.
+Install yuniql CLI with Chocolatey or use alternative ways listed here [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}}).
 
 ```shell
 choco install yuniql
 ```
-	
-Create new migration workspace
+
+Create new migration workspace.
 
 ```shell
 md c:\temp\yuniql-docker
-cd yuniql-docker
+cd c:\temp\yuniql-docker
 
 yuniql init
 dir /O:N
@@ -48,7 +50,7 @@ dir /O:N
 10/21/2019  22:41                   .gitignore
 ```
 
-Create first script file `setup_tables.sql` on `v0.00`
+Create first script file `setup_tables.sql` on `v0.00`.
 
 ```sql
 CREATE TABLE [dbo].[Visitor](
@@ -61,17 +63,17 @@ CREATE TABLE [dbo].[Visitor](
 GO
 ```
 
-Build docker image
+Build docker image.
 
 ```shell
 docker build -t sqlserver-example .
 ```
 
-Run migration from docker
+Run migration from docker.
 
 ```shell
 docker run sqlserver-example -c "<your-connection-string>" -a
-docker logs <your-container-id> -f
+docker logs sqlserver-example -f
 ```
 
 Commit your project into git and use it as input in creating CI/CD pipelines.
@@ -113,7 +115,7 @@ steps:
 
 #### Private Container Registry
 
-If your company policy disallow pulling images DockerHub, you may build the image internally by cloning the GitHub repo and building docker images locally. The docker files are multi-staged. Please refer to `dockerfile.multi-stage-linux-x64` and `dockerfile.multi-stage-win-x64`.
+If your company security policy disallows pulling images DockerHub, you may build the base image internally by cloning the GitHub repo and building docker images locally. The docker files are multi-staged. Please refer to `dockerfile.multi-stage-linux-x64` and `dockerfile.multi-stage-win-x64`.
 
 Build images and push to your preferred registry
 

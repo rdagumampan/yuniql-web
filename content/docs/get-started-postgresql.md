@@ -13,25 +13,23 @@ Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref
 choco install yuniql
 ```
 
-Download samples for Sql Server. Samples for sqlserver, postgresql and other platforms are available here https://github.com/rdagumampan/yuniql/tree/master/samples
+Download samples for PostgreSql. Samples for postgresql, mysql and other platforms are available here https://github.com/rdagumampan/yuniql/tree/master/samples
 
 ```shell
 git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql-getstarted
 cd c:\temp\yuniql-getstarted\samples\basic-postgresql-sample
 ```
 
-Prepare your connection string in an environment variable. This sample uses PostgreSql on docker container. For more connection string samples, visit https://www.connectionstrings.com/postgresql.
+Prepare your connection string in an environment variable. This sample uses PostgreSql on Docker container. For more connection string samples, visit https://www.connectionstrings.com/postgresql.
 
 ```shell
 docker run -e POSTGRES_USER=sa -e POSTGRES_PASSWORD=P@ssw0rd! -e POSTGRES_DB=helloyuniql -p 5432:5432 postgres
 SETX YUNIQL_CONNECTION_STRING "Host=localhost;Port=5432;Username=sa;Password=P@ssw0rd!;Database=helloyuniql"
 ```
 
-Apply migrations with `yuniql run` and specify the target platform with `--platform`. Yuniql discovers the project directory, creates the target database if it doesn't exist and runs all migration steps in the order they are listed. These includes `.sql` files, directories, subdirectories, and csv files. Tokens are also replaced via `-k` parameters.
+Apply migrations with `yuniql run` and specify the target platform with `--platform`. Yuniql discovers the project directory, sorts all versions, creates the target database if it doesn't exist and runs all migration steps in the right order. These includes `.sql` files, directories, subdirectories, and csv files.
 
 ```shell
-cd c:\temp\yuniql-getstarted\samples\basic-postgresql-sample
-
 yuniql run --platform postgresql -a
 yuniql info --platform postgresql
 
@@ -39,7 +37,7 @@ Version         Created                         CreatedBy
 v0.00           2019-11-03T16:29:36.0130000     DESKTOP-ULR8GDO\rdagumampan
 ```
 
-Verify results. Query tables with pgAdmin or your preferred PostgreSql client
+Verify results with your preferred PostgreSql Client. A query with PgAdmin yields the following results.
 
 ![yuniql-evodb](/images/get-started-postgresql-01.png)
 

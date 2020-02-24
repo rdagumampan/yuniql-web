@@ -22,7 +22,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd!" -p 1400:1433 -d m
 
 #### Run migration from .NET Core console app
 
-Create new web app
+Create new web app.
 
 ```shell
 dotnet --version
@@ -32,21 +32,21 @@ dotnet new console -o console-sample
 cd console-sample
 ```
 
-Add `Yuniql.AspNetCore`
+Add `Yuniql.AspNetCore`.
 
 ```shell
 dotnet add package Yuniql.Core
 dotnet build
 ```
 
-Copy sample database into `_db` directory in your project
+Copy sample database into `_db` directory in your project.
 
 ```shell
 git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql-console
 cd c:\temp\yuniql-console\samples\basic-sqlserver-sample
 ```
 	
-Modify the `Main` method of `Program.cs`
+Modify the `Main` method of `Program.cs`.
 	
 ```csharp
 using Yuniql.Core;
@@ -76,7 +76,7 @@ static void Main(string[] args)
 }
 ```
 
-Test run
+Test .
 
 ```shell
 dotnet build

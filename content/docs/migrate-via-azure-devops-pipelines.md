@@ -41,14 +41,15 @@ steps:
 ```
 
 This runs database migration with yuniql-cli.
-* `version`: The version of Yuniql CLI. If omitted, the latest version of yuniql-cli is installed. Visit the [releases](https://github.com/rdagumampan/yuniql/releases) to get an appropriate version. 
-* `connectionString`: The connection string to your target database server.
-* `workspacePath`: The location of your version directories to run.
-* `targetPlatform`: The target database platform. Default is SqlServer.
-* `autoCreateDatabase`: When true, creates and configure the database in the target server for yuniql migrations.
-* `targetVersion`: The maximum target database schema version to run to.
-* `tokenKeyValuePair`: Token key/value pairs for token replacement.
-* `additionalArguments`: Additional CLI arguments
+
+- `version`: The version of Yuniql CLI. If omitted, the latest version of yuniql-cli is installed. Visit the [releases](https://github.com/rdagumampan/yuniql/releases) to get an appropriate version. 
+- `connectionString`: The connection string to your target database server.
+- `workspacePath`: The location of your version directories to run.
+- `targetPlatform`: The target database platform. Default is SqlServer.
+- `autoCreateDatabase`: When true, creates and configure the database in the target server for yuniql migrations.
+- `targetVersion`: The maximum target database schema version to run to.
+- `tokenKeyValuePair`: Token key/value pairs for token replacement.
+- `additionalArguments`: Additional CLI arguments
 
 #### Azure DevOps Pipelines (Classic)
 ##### Use YUNIQL CLI Task
@@ -56,7 +57,8 @@ This runs database migration with yuniql-cli.
 ![](https://rdagumampan.gallerycdn.vsassets.io/extensions/rdagumampan/yuniql-azdevops-extensions/0.56.0/1576914414829/images/screenshot-01.png)
 
 This download and installs the yuniql-cli.
-* `version`: The version of Yuniql CLI. If omitted, the latest version of yuniql-cli is installed. Visit the [releases](https://github.com/rdagumampan/yuniql/releases) to get an appropriate version. 
+
+- `version`: The version of Yuniql CLI. If omitted, the latest version of yuniql-cli is installed. Visit the [releases](https://github.com/rdagumampan/yuniql/releases) to get an appropriate version. 
 
 ##### Run YUNIQL CLI Task
 

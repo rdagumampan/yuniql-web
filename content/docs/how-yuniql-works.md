@@ -7,7 +7,7 @@ draft = false
 toc = false
 +++
 
-Yuniql is a Data Platform DevOps tool using migration-based and database-first delivery model. Migration-based means each changeset to the schema and seed data is set of carefully prepared scripts controlled with a version number. Database-first as it does not rely on application code to auto-generate the change scripts. Yuniql faciliates database DevOps with close integration with common DevOps tools such as Azure Pipelines and Docker.
+Yuniql is a Data Platform DevOps tool using migration-based and database-first delivery model. Migration-based means each changeset to the schema and seed data is a set of carefully prepared scripts controlled with a version number. Database-first as it does not rely on application code to auto-generate the change scripts. Yuniql faciliates database DevOps with close integration with common DevOps tools such as Azure Pipelines and Docker.
 
 ![yuniql-evodb](/images/evodb-01.png)
 
@@ -53,7 +53,7 @@ SequenceId	Version	AppliedOnUtc	    AppliedByUser	            AppliedByTool	Appl
 1	        v0.00	2020-02-21 06:10    DESKTOP-ULR8GDO\rdagumampan	yuniql-cli	    v0.350.0.0
 ```
 
-As you create more versions over time, yuniql discovers all migrations left unapplied from source repostitory and apply to the target database. Assumming you have two more versions created locally `v1.00` and `v1.01`, the tracking table would have filled this way.
+As you create more versions over time, yuniql discovers all migrations left unapplied from source repository and apply to the target database. Assumming you have two more versions created locally `v1.00` and `v1.01`, the tracking table would have filled this way when `yuniql run` is issued next time.
 
 ```shell
 Directory of C:\temp\sqlserver-sample
@@ -108,11 +108,11 @@ steps:
 
 #### Advanced Options
 
-There are situations when scripts are conditional to the environment they are executing. You may have scripts that fits in non-production environment but has to be changed when executed in production. Yuniql discovers environment-aware scripts during migration run. [More on this...]({{< ref "/docs/environment-aware-scripts.md" >}}). 
+There are cases when your scripts are conditional to the environment they are executing. You may have scripts that fits in non-production environment but has to be changed when executed in production. To cover this, yuniql discovers environment-aware scripts during migration run. [More on this...]({{< ref "/docs/environment-aware-scripts.md" >}}). 
 
 A baseline database includes both schema and data. While you can always write scripts to seed your data, it could be easier to bulk load them using CSV files. Yuniql discovers CSV files in the directories and load into tables bearing the name of the file. [More on this...]({{<ref "/docs/bulk-import-csv-master-data.md">}}).
 
-When versioning an existing database, it may help to organize the scripts into collections of sub-directories. Yuniql discovers all directories and child directories, sort them, and execute based on order by name. [Tips and tricks...]({{<ref "/docs/tips-and-tricks.md#organize-in-sub-directories" >}})
+When versioning an existing database, it may help to organize the scripts into collections of sub-directories. Yuniql discovers all directories and child directories, sort them, and execute based on order by name. See more [tips and tricks...]({{<ref "/docs/tips-and-tricks.md#organize-in-sub-directories" >}})
 
 #### Learn further
 

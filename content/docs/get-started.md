@@ -1,7 +1,7 @@
 +++
 title = "Get started!"
 description = "Kick-start your database devops with yuniql CLI. Done in 10 mins max."
-bref = "Yuniql allows developers, data engineers and DBAs to run migration steps from CLI, Azure DevOps and Docker. This is an express guide to using yuniql CLI. Run these commands line by line via Command Prompt (CMD)."
+bref = "Yuniql allows developers, data engineers and DBAs to run migration steps from CLI, Azure DevOps and Docker. This is an express guide to using yuniql CLI. Run these commands line by line via Command Prompt (CMD) or Powershell."
 weight = 2
 draft = false
 toc = false
@@ -27,10 +27,9 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd!" -p 1400:1433 -d m
 SETX YUNIQL_CONNECTION_STRING "Server=localhost,1400;Database=helloyuniql;User Id=SA;Password=P@ssw0rd!"
 ```
 
-Apply migrations with `yuniql run`. Yuniql discovers the project directory, creates the target database if it doesn't exist and runs all migration steps in the order they are listed. These includes `.sql` files, directories, subdirectories, and csv files. Tokens are also replaced via `-k` parameters.
-```shell
-cd c:\temp\yuniql-getstarted\samples\basic-sqlserver-sample
+Apply migrations with `yuniql run`. Yuniql discovers the project directory, sorts all versions, creates the target database if it doesn't exist and runs all migration steps in the right order. Each migration step may include `.sql` files, directories, subdirectories, and csv files.
 
+```shell
 yuniql run -a
 yuniql info
 
@@ -38,7 +37,7 @@ Version         Created                         CreatedBy
 v0.00           2019-11-03T16:29:36.0130000     DESKTOP-ULR8GDO\rdagumampan
 ```
 
-Verify results. Query tables with SSMS or your preferred SQL client
+Verify results with your preferred SQL Client. A query with SSMS yields the following results.
 
 ![yuniql-sqlserver-migration](/images/get-started-sqlserver.png)
 
