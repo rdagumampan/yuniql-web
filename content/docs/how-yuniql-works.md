@@ -2,7 +2,7 @@
 title = "How yuniql works"
 description = "Sneek peek. Design principles, ways of working and internals of yuniql."
 bref = "Understand the design principles, the ways of working and internals of yuniql."
-weight = 1
+weight = 2
 draft = false
 toc = false
 +++

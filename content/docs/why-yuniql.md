@@ -1,8 +1,8 @@
 +++
 title = "Why yuniql"
 description = "Pain points that yuniql solves and opportunities it presents to teams."
-bref = "Pain points that yuniql solves and opportunities it presents to developers, data engineers and DBAs."
-weight = 2
+bref = "Accelerate delivery. Release database changes safely. The pain points that yuniql solves and opportunities it presents to developers, data engineers and DBAs."
+weight = 1
 draft = false
 toc = false
 +++
@@ -21,6 +21,11 @@ An application code running on incompatible database schema will break. When it 
 
 #### Drive automated continuous delivery
 While it maybe convenient to connect to database servers and execute critical change script, the risk for expensive or sometimes catastropic human errors is high! Keeps developers hands clean by automatic database deployment and change script execution via Release Pipelines. yuniql provides ready-to-use Azure DevOps Tasks, Docker base images and rich CLI commands to automate your deployment.
+
+#### Learn further
+
+* [Get Started]({{< ref "/docs/get-started.md" >}})
+* [Work with PostgreSql, MySql and others]({{< ref "/docs/get-started-postgresql.md" >}})
 
 #### Found bugs?
 
