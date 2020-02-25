@@ -1,8 +1,8 @@
 +++
 title = "Get started here!"
-description = "Kick-start your database devops with yuniql CLI. Done in 10 mins max."
+description = "Kick-start your database devops with yuniql. Done in 10 mins max."
 bref = "Yuniql allows developers, data engineers and DBAs to run migration steps from CLI, Azure DevOps and Docker. This is an express guide to using yuniql CLI. Run these commands line by line via Command Prompt (CMD) or Powershell."
-weight = 2
+weight = 3
 draft = false
 toc = false
 +++

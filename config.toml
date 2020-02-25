@@ -13,9 +13,9 @@ Paginate = 4
   email = "rdagumampan@gmail.com"
 
 [[menu.main]]
-    name = "Get started"
+    name = "Why yuniql"
     weight = 1
-    url = "/docs/get-started/"
+    url = "/docs/why-yuniql/"
 
 [[menu.main]]
     name = "How it works"
