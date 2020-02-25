@@ -9,7 +9,7 @@ toc = false
 
 #### Get some sanity, organize your project into sub-directories
 
-When versioning an existing database, you may end creating a giant script file with all the noise created by your script-generation tool. As yuniql supports child directories, you may organize your version directory as demonstrated below. Use a sequence number prefix to guarantee they executed in the right order.
+When versioning an existing database, you may end up creating a giant script file with all the noise created by your script-generation tool. As yuniql supports child directories, you may organize your version directories as shown below. Use a sequence number prefix to guarantee they executes in the right order.
 
 ```shell
 cd C:\play\yuniql\samples\sqlserver-adventureworkslt2016-sample
@@ -47,7 +47,7 @@ A sample is available here for reference https://github.com/rdagumampan/yuniql/t
 
 #### Make your application compatible with the DB again
 
-When you need to ensure that the application always runs to a compatible schema version of the database, you may use Yuniql API to assert this when your service runs. An example is described below. 
+When you need to ensure that the application always runs to a compatible schema version of the database, you may use Yuniql API to assert this when your service runs. This is part of `Yuniql.Core` nuget package. An example is described below. 
 
 
 ```csharp
@@ -68,7 +68,7 @@ A sample is available here for reference https://github.com/rdagumampan/yuniql/t
 
 #### You don't like Comma in CSV, try with Pipe |
 
-Using CSV files is an effective way to bulk load your master data and look-up table. It looks nice but you don't like Comma... Maybe its better with Semi-colon ";" or Pipe "|". Try this way
+Using CSV files is an effective way to bulk load your master data and look-up table. It looks nice but you may not like Comma... Maybe its better with Semi-colon ";" or Pipe "|". Try this way
 
 ```csharp
 using Yuniql.AspNetCore;

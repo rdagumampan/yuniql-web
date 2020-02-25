@@ -1,5 +1,5 @@
 +++
-title = "How Yuniql Works"
+title = "How yuniql works"
 description = "Understand the design principles, the ways of working and internals of yuniql."
 bref = "Understand the design principles, the ways of working and internals of yuniql."
 weight = 1

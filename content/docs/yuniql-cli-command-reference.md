@@ -36,7 +36,7 @@ yuniql init [-p|--path] [-d|--debug] [--help]
 
 ##### **`yuniql vnext`**
 ---
-Identifies the latest version locally and increments the minor version with the format `v{major}.{minor}`. The command just helps reduce human errors and this can also be done manually.
+Identifies the latest version locally and increments the minor version with the format `v{major}.{minor}`. The command just helps keeping the semantic consistent and this can also be done manually.
 
 ```shell
 yuniql vnext [-p|--path] [-M|--major] [-m|--minor] [-f|--file] [-d|--debug] 
@@ -68,7 +68,7 @@ yuniql vnext [-p|--path] [-M|--major] [-m|--minor] [-f|--file] [-d|--debug]
 
 ##### **`yuniql run`**
 ---
-Inspects the target database and creates required table to track the versions. All script files in `_init` directory will be executed. The order of execution is as follows `_init`,`_pre`,`vx.xx`,`_draft`,`_post`. Several variations on how we can run migration are listed below.
+Inspects the target database and creates the required table to track the versions. All script files in `_init` directory will be executed on first run. The order of execution is as follows `_init`,`_pre`,`vx.xx`,`_draft`,`_post`. Several variations on how we can run migration are listed below.
 
 ```shell
 yuniql run [-p|--path] [-c|--connection-string] [-a|--auto-create-db] [-t|--target-version] 
