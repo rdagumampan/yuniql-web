@@ -44,7 +44,7 @@ Executed scripts in _draft directory
 Executed scripts in _post directory
 ```
 
-A successful first-run would have tracking the table filled-up this way.
+A successful first-run would have the tracking table filled-up this way.
 
 ```sql
 SELECT * FROM __YuniqlDbVersion;
