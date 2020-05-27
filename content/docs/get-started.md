@@ -10,7 +10,7 @@ toc = false
 Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}})
 
 ```shell
-choco install yuniql
+choco install yuniql --version=0.465.0
 ```
 
 Download samples for Sql Server. Samples for sqlserver, postgresql and other platforms are available here https://github.com/rdagumampan/yuniql/tree/master/samples
