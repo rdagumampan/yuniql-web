@@ -13,7 +13,7 @@ Install Yuniql CLI<br>
 [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}}).
 
 ```shell
-choco install yuniql
+choco install yuniql --version=0.465.0
 ```
 
 Initialize local version
