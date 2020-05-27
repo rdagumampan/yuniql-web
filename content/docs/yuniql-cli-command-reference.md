@@ -72,7 +72,8 @@ Inspects the target database and creates the required table to track the version
 
 ```shell
 yuniql run [-p|--path] [-c|--connection-string] [-a|--auto-create-db] [-t|--target-version] 
-    [-k|--token] [--bulk-separator] [--platform] [--command-timeout] [--environment] [-d|--debug]
+    [-k|--token] [--platform] [--environment] [--bulk-separator] [--bulk-batch-size] [--command-timeout] 
+    [--meta-schema] [--meta-table] [--continue-after-failure] [-d|--debug]
 ```
 
 - `-p "c:\temp\demo" | --path "c:\temp\demo"`
@@ -95,21 +96,37 @@ yuniql run [-p|--path] [-c|--connection-string] [-a|--auto-create-db] [-t|--targ
 
     Replace each tokens in each script file. This is very helpful when you have environment specific sql-statements such as cross-server queries where database names are suffixed by the environment.
 
+- `--platform "postgresql"`
+
+    Runs migration targetting PostgreSql database. Defaults to `sqlserver`. See supported platforms.
+
 - `--bulk-separator ";"`
 
     Runs bulk import of CSV files using `;` as bulk values separator. Defaults to `;`;
 
-- `--platform "postgresql"`
+- `--bulk-batch-size "300"`
 
-    Runs migration targetting PostgreSql database. Defaults to `sqlserver`. See supported platforms.
+    Bulk import batch size for platforms supporting batch rows.. Defaults to `0`;
+
+- `--environment "DEV"`
+
+    Environment code for environment-aware scripts.
 
 - `--command-timeout 120`
     
     The time in seconds to wait for the each command to execute. Defaults to 30 secs.
 
-- `--environment "DEV"`
+- `--meta-schema`
 
-    Environment code for environment-aware scripts.
+    Schema name for schema versions table.
+
+- `--meta-table`
+
+    Table name for schema versions table.
+
+- `--continue-after-failure`
+
+    Skip failed script and continue with migration (Only for platforms which doesn't fully support transactions
 
 - `-d | --debug`
 
