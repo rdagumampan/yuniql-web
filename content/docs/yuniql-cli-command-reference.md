@@ -72,7 +72,7 @@ Inspects the target database and creates the required table to track the version
 
 ```shell
 yuniql run [-p|--path] [-c|--connection-string] [-a|--auto-create-db] [-t|--target-version] 
-    [-k|--token] [--delimeter] [--platform] [--command-timeout] [--environment] [-d|--debug]
+    [-k|--token] [--bulk-separator] [--platform] [--command-timeout] [--environment] [-d|--debug]
 ```
 
 - `-p "c:\temp\demo" | --path "c:\temp\demo"`
@@ -95,9 +95,9 @@ yuniql run [-p|--path] [-c|--connection-string] [-a|--auto-create-db] [-t|--targ
 
     Replace each tokens in each script file. This is very helpful when you have environment specific sql-statements such as cross-server queries where database names are suffixed by the environment.
 
-- `--delimiter ";"`
+- `--bulk-separator ";"`
 
-    Runs bulk import of CSV files using `;` as delimiter. Defaults to `;`;
+    Runs bulk import of CSV files using `;` as bulk values separator. Defaults to `;`;
 
 - `--platform "postgresql"`
 
@@ -125,7 +125,7 @@ Checks if all your versions can be executed without errors. It runs through all 
 
 ```shell
 yuniql verify [-p|--path] [-c|--connection-string] [-t|--target-version] 
-    [-k|--token] [--delimeter] [--platform] [--command-timeout] [--environment] [-d|--debug]
+    [-k|--token] [--bulk-separator] [--platform] [--command-timeout] [--environment] [-d|--debug]
 ```
 
 >NOTE: Because it relies on an existing database, you can only use `verify` on database already baselined or versioned.
