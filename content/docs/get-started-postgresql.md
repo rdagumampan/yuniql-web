@@ -31,7 +31,7 @@ Apply migrations with `yuniql run` and specify the target platform with `--platf
 
 ```shell
 yuniql run --platform postgresql -a
-yuniql info --platform postgresql
+yuniql list --platform postgresql
 
 Version         Created                         CreatedBy
 v0.00           2019-11-03T16:29:36.0130000     DESKTOP-ULR8GDO\rdagumampan

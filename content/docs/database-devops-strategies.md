@@ -58,7 +58,7 @@ Database developers can follow these CLI sequence calls to prepare local db vers
 - `yuniql init` / initializes db project structure
 - `yuniql vnext` / increments version
 - `yuniql run` / runs migrations
-- `yuniql info` / shows existing versions applied
+- `yuniql list` / shows existing versions applied
 - `yuniql erase` / cleans up when done local testing
 
 #### Learn further
