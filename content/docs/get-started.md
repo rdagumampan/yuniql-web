@@ -31,7 +31,7 @@ Apply migrations with `yuniql run`. Yuniql discovers the project directory, sort
 
 ```shell
 yuniql run -a
-yuniql info
+yuniql list
 
 Version         Created                         CreatedBy
 v0.00           2019-11-03T16:29:36.0130000     DESKTOP-ULR8GDO\rdagumampan

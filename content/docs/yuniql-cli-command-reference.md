@@ -12,7 +12,7 @@ Yuniql CLI is powerful interface to prepare and run migrations from developer's 
 - `yuniql init` / initializes db project structure
 - `yuniql vnext` / increments version
 - `yuniql run` / runs migrations
-- `yuniql info` / shows existing versions applied
+- `yuniql list` / shows existing versions applied
 - `yuniql erase` / cleans up when done local testing
 
 ##### **`yuniql init`**
@@ -147,12 +147,12 @@ yuniql verify [-p|--path] [-c|--connection-string] [-t|--target-version]
 
 >NOTE: Because it relies on an existing database, you can only use `verify` on database already baselined or versioned.
 
-##### **`yuniql info`**
+##### **`yuniql list`**
 ---
 Shows all version currently present in the target database.
 
 ```shell
-yuniql info [-p|--path] [-c|--connection-string] [--platform] [--command-timeout] [-d|--debug]
+yuniql list [-p|--path] [-c|--connection-string] [--platform] [--command-timeout] [-d|--debug]
 ```
 
 - `-p "c:\temp\demo" | --path "c:\temp\demo"`
