@@ -29,7 +29,7 @@ Directory of C:\temp\sqlserver-sample
 11/10/2019  10:54    <DIR>          _erase
 11/10/2019  10:42    <DIR>          _init
 11/10/2019  10:42    <DIR>          _post
-11/10/2019  10:43    <DIR>          _prre
+11/10/2019  10:43    <DIR>          _pre
 ```
 
 When `yuniql run` is issued the first time, it inspects the target database and creates required table to track the versions applied. All script files in `_init` directory and child directories will be executed only this time. The order of execution is as follows `_init`, `_pre`, `vx.xx`, `vxx.xx+N`, `_draft` , `_post`.
@@ -91,11 +91,11 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: UseYUNIQLCLI@0
+- task: UseYUNIQLCLI@1
   inputs:
     version: 'latest'
 
-- task: RunYUNIQLCLI@0
+- task: RunYUNIQLCLI@1
   inputs:
     version: 'latest'
     connectionString: '<your-connection-string>'

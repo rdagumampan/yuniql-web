@@ -27,11 +27,11 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: UseYUNIQLCLI@0
+- task: UseYUNIQLCLI@1
   inputs:
     version: 'latest'
 
-- task: RunYUNIQLCLI@0
+- task: RunYUNIQLCLI@1
   inputs:
     version: 'latest'
     connectionString: 'Server=tcp:<AZ-SQLSERVER>,1433;Initial Catalog=<AZ-SQLDB>;User ID=<USERID>;Password=<PASSWORD>;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
