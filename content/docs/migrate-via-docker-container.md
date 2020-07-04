@@ -27,7 +27,7 @@ Install yuniql CLI.
 Install yuniql CLI with Chocolatey or use alternative ways listed here [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}}).
 
 ```shell
-choco install yuniql --version=0.465.0
+choco install yuniql --version=1.0.1
 ```
 
 Create new migration workspace.

@@ -10,14 +10,14 @@ toc = false
 Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}})
 
 ```shell
-choco install yuniql --version=0.465.0
+choco install yuniql --version=1.0.1
 ```
 
 Download samples for PostgreSql. Samples for postgresql, mysql and other platforms are available here https://github.com/rdagumampan/yuniql/tree/master/samples
 
 ```shell
-git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql-getstarted
-cd c:\temp\yuniql-getstarted\samples\basic-postgresql-sample
+git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql
+cd c:\temp\yuniql\samples\basic-postgresql-sample
 ```
 
 Prepare your connection string in an environment variable. This sample uses PostgreSql on Docker container. For more connection string samples, visit https://www.connectionstrings.com/postgresql.
@@ -33,8 +33,15 @@ Apply migrations with `yuniql run` and specify the target platform with `--platf
 yuniql run --platform postgresql -a
 yuniql list --platform postgresql
 
-Version         Created                         CreatedBy
-v0.00           2019-11-03T16:29:36.0130000     DESKTOP-ULR8GDO\rdagumampan
+Running yuniql v1.0.1 for windows-x64
+Copyright 2019 (C) Rodel E. Dagumampan. Apache License v2.0
+Visit https://yuniql.io for documentation & more samples
+
++---------------+----------------------+------------+---------------+---------------------+
+| SchemaVersion | AppliedOnUtc         | Status     | AppliedByUser | AppliedByTool       |
++---------------+----------------------+------------+---------------+---------------------+
+| v0.00         | 2020-07-04 15:35:17Z | Successful | sa            | yuniql-cli v1.0.1.0 |
++---------------+----------------------+------------+---------------+---------------------+
 ```
 
 Verify results with your preferred PostgreSql Client. A query with PgAdmin yields the following results.

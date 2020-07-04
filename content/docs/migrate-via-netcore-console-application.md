@@ -42,8 +42,8 @@ dotnet build
 Copy sample database into `_db` directory in your project.
 
 ```shell
-git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql-console
-cd c:\temp\yuniql-console\samples\basic-sqlserver-sample
+git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql
+cd c:\temp\yuniql\samples\basic-sqlserver-sample
 ```
 	
 Modify the `Main` method of `Program.cs`.
@@ -56,7 +56,7 @@ using Yuniql.Core;
 static void Main(string[] args)
 {
 	var traceService = new ConsoleTraceService { IsDebugEnabled = true };
-	var configuration = new YuniqlConfiguration
+	var configuration = new Configuration
 	{
 		WorkspacePath = Path.Combine(Environment.CurrentDirectory, "_db"),
 		ConnectionString = "Server=localhost,1400;Database=yuniqldb;User Id=SA;Password=P@ssw0rd!",

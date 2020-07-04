@@ -4,13 +4,13 @@ description = "Install yuniql with choco, dotnet global tool, powershell, or dir
 bref = "Install yuniql CLI from various distribution channels. Use Chocolatey package manager, dotnet global tool, powershell, nuget packages or download directly from relase repository."
 weight = 11
 draft = false
-toc = false
+toc = true
 +++
 
 #### Install with Chocolatey
 Downloads latest yuniql CLI with [Chocolatey](https://chocolatey.org/) package manager. See further instructions here https://chocolatey.org/install.
 ```shell
-choco install yuniql --version=0.465.0
+choco install yuniql --version=1.0.1
 yuniql version
 ```
 
