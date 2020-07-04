@@ -17,7 +17,7 @@ toc = false
 Deploy an SQL Server on Linux container or use your preferred instance.
 
 ```shell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd!" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -d -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd!" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 #### Run migration from .NET Core console app

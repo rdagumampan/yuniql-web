@@ -1,16 +1,30 @@
 +++
 title = "Intstall yuniql CLI"
 description = "Install yuniql with choco, dotnet global tool, powershell, or direct download."
-bref = "Install yuniql CLI from various distribution channels. Use Chocolatey package manager, dotnet global tool, powershell, nuget packages or download directly from relase repository."
+bref = "Install yuniql CLI from various distribution channels for Windows and Linux. Use Chocolatey, dotnet global tool, powershell, nuget packages or download directly."
 weight = 11
 draft = false
-toc = true
+toc = false
 +++
 
-#### Install with Chocolatey
+#### Install with choco package (windows-x64)
 Downloads latest yuniql CLI with [Chocolatey](https://chocolatey.org/) package manager. See further instructions here https://chocolatey.org/install.
 ```shell
 choco install yuniql --version=1.0.1
+yuniql version
+```
+
+#### Install with tar.gz package (linux-x64)
+Install yuniql CLI on Linux. The package has been verified on Ubuntu 18.04.
+
+```shell
+cd /home
+sudo curl https://github.com/rdagumampan/yuniql/releases/download/v1.0.1/yuniql-cli-linux-x64-latest.tar.gz -L -o yuniql.tar.gz
+sudo tar -xvzf yuniql.tar.gz -C /bin
+
+cd /bin
+sudo chmod +x yuniql
+
 yuniql version
 ```
 
@@ -42,7 +56,7 @@ Use this for .NET Core WebApp and Worker App. Works only for .NET Core 3.0 and l
 dotnet add package Yuniql.AspNetCore
 ```
 
-##### Install on .NET Core project
+##### Install on any .NET Core project
 Use this for .NET Core Console App. Also usable for WebApp and Worker App but we recommend `Yuniql.AspNetCore` for that. Works only for .NET Core 3.0 and later. See how-to guide here [{{< ref "/docs/migrate-via-netcore-console-application.md" >}}]({{< ref "/docs/migrate-via-netcore-console-application.md" >}}).
 ```shell
 dotnet add package Yuniql.Core
@@ -50,14 +64,17 @@ dotnet add package Yuniql.Core
 
 #### Learn further
 
+* [Get started]({{< ref "/docs/get-started.md" >}})
+* [Supported Platforms]({{< ref "/docs/supported-platforms.md" >}})
 * [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
 * [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
 * [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
 * [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
-* [Yuniql CLI Command Reference]({{< ref "/docs/yuniql-cli-command-reference.md" >}})
+
+<!-- * [Yuniql CLI Command Reference]({{< ref "/docs/yuniql-cli-command-reference.md" >}})
 * [Bulk Import CSV Master Data]({{< ref "/docs/bulk-import-csv-master-data.md" >}})
 * [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
-* [Environment-aware Migration]({{< ref "/docs/environment-aware-scripts.md" >}})
+* [Environment-aware Migration]({{< ref "/docs/environment-aware-scripts.md" >}}) -->
 
 #### Found bugs?
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).

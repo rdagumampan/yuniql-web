@@ -2,7 +2,7 @@
 title = "Migrate via ASP.NET Core App"
 description = "Run your database migration when your ASP.NET Core app starts up."
 bref = "Run your database migration when your ASP.NET Core host service starts up. This ensures that database is always at latest compatible state before operating the service."
-weight = 4
+weight = 5
 draft = false
 toc = false
 +++
@@ -17,7 +17,7 @@ toc = false
 Deploy an SQL Server on Linux container or use your preferred instance.
 
 ```shell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd!" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -dit -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=P@ssw0rd!" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 #### Run migration from .NET Core web app
