@@ -11,7 +11,7 @@ Run your database migration thru a Docker container. This is specially helpful o
 
 When you run `yuniql init` command, a baseline directory structure will be created automatically. This includes a ready-to-use Dockerfile.
 
-<img src="https://raw.githubusercontent.com/rdagumampan/yuniql/master/assets/wiki-sample-sqlserverdb-01.png" width=700>
+<img src="/images/wiki-sample-sqlserverdb-01.png" width=700>
 
 When you call `docker build`, we pull the base image containing the nightly build of `yuniql` and all of your local structure is copied into the image. When you call `docker run`, it executes a `yuniql run` inside the container and targets your desired server.
 
@@ -27,7 +27,7 @@ Install yuniql CLI.
 Install yuniql CLI with Chocolatey or use alternative ways listed here [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}}).
 
 ```shell
-choco install yuniql --version=0.465.0
+choco install yuniql --version=1.0.1
 ```
 
 Create new migration workspace.
@@ -81,7 +81,7 @@ Commit your project into git and use it as input in creating CI/CD pipelines.
 #### Setup Azure DevOps Pipelines
 The following pipelines runs `sqlserver-sample` project into Azure SQL Database. The samples are available on [Yuniql GitHub repository](https://github.com/rdagumampan/yuniql/tree/master/samples/sqlserver-sample). You may clone the repo to test the pipelines.
 
-<img src="https://raw.githubusercontent.com/rdagumampan/yuniql/master/assets/dockerized-migration-03.png">
+<img src="/images/dockerized-migration-03.png">
 
 ##### Agent task: docker build
 ```yaml
@@ -94,7 +94,7 @@ steps:
     arguments: '-t sqlserver-example'
     addPipelineData: false
 ```
-<img src="https://raw.githubusercontent.com/rdagumampan/yuniql/master/assets/dockerized-migration-01.png">
+<img src="/images/dockerized-migration-01.png">
 
 ##### Agent task: docker run
 
@@ -111,7 +111,7 @@ steps:
     addPipelineData: false
 ```
 
-<img src="https://raw.githubusercontent.com/rdagumampan/yuniql/master/assets/dockerized-migration-02.png">
+<img src="/images/dockerized-migration-02.png">
 
 #### Private Container Registry
 

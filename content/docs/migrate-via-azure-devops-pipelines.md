@@ -9,7 +9,7 @@ toc = false
 
 Run your database migration from Azure DevOps Pipelines. The tasks downloads package and cache it for later execution just like how `Use .NET Core` or `Use Node` tasks works. Find Yuniql on [Azure DevOps MarketPlace](https://marketplace.visualstudio.com/items?itemName=rdagumampan.yuniql-azdevops-extensions). Install the DevOps Extension and add the following tasks.
 
-<img align="center" src="https://github.com/rdagumampan/yuniql/raw/master/assets/wiki-az-devops-task-pipeline.png">
+<img align="center" src="/images/wiki-az-devops-task-pipeline.png">
 
 #### Pre-requisites
 
@@ -27,11 +27,11 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: UseYUNIQLCLI@0
+- task: UseYUNIQLCLI@1
   inputs:
     version: 'latest'
 
-- task: RunYUNIQLCLI@0
+- task: RunYUNIQLCLI@1
   inputs:
     version: 'latest'
     connectionString: 'Server=tcp:<AZ-SQLSERVER>,1433;Initial Catalog=<AZ-SQLDB>;User ID=<USERID>;Password=<PASSWORD>;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'

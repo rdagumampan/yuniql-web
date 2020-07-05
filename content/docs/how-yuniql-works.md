@@ -2,7 +2,7 @@
 title = "How yuniql works"
 description = "Sneek peek. Design principles, ways of working and internals of yuniql."
 bref = "Understand the design principles, the ways of working and internals of yuniql."
-weight = 2
+weight = 1
 draft = false
 toc = false
 +++
@@ -29,7 +29,7 @@ Directory of C:\temp\sqlserver-sample
 11/10/2019  10:54    <DIR>          _erase
 11/10/2019  10:42    <DIR>          _init
 11/10/2019  10:42    <DIR>          _post
-11/10/2019  10:43    <DIR>          _prre
+11/10/2019  10:43    <DIR>          _pre
 ```
 
 When `yuniql run` is issued the first time, it inspects the target database and creates required table to track the versions applied. All script files in `_init` directory and child directories will be executed only this time. The order of execution is as follows `_init`, `_pre`, `vx.xx`, `vxx.xx+N`, `_draft` , `_post`.
@@ -50,7 +50,7 @@ A successful first-run would have the tracking table filled-up this way.
 SELECT * FROM __YuniqlDbVersion;
 
 SequenceId	Version	AppliedOnUtc	    AppliedByUser	            AppliedByTool	AppliedByToolVersion
-1	        v0.00	2020-02-21 06:10    DESKTOP-ULR8GDO\rdagumampan	yuniql-cli	    v0.350.0.0
+1	        v0.00	2020-02-21 06:10    DESKTOP-ULR8GDO\rdagumampan	yuniql-cli	    v1.0.1.0
 ```
 
 As you create more versions over time, yuniql discovers all migrations left unapplied from source repository and apply to the target database. Assumming you have two more versions created locally `v1.00` and `v1.01`, the tracking table would have filled this way when `yuniql run` is issued next time.
@@ -75,9 +75,9 @@ Executed scripts in _v1.01 directory
 SELECT * FROM __YuniqlDbVersion;
 
 SequenceId	Version	AppliedOnUtc	    AppliedByUser	            AppliedByTool	AppliedByToolVersion
-1	        v0.00	2020-02-21 06:10	DESKTOP-ULR8GDO\rdagumampan	yuniql-cli	    v0.350.0.0
-2	        v1.00	2020-02-21 06:30	DESKTOP-ULR8GDO\rdagumampan	yuniql-cli	    v0.350.0.0
-3	        v1.01	2020-02-21 06:30	DESKTOP-ULR8GDO\rdagumampan	yuniql-cli	    v0.350.0.0
+1	        v0.00	2020-02-21 06:10	DESKTOP-ULR8GDO\rdagumampan	yuniql-cli	    v1.0.1.0
+2	        v1.00	2020-02-21 06:30	DESKTOP-ULR8GDO\rdagumampan	yuniql-cli	    v1.0.1.0
+3	        v1.01	2020-02-21 06:30	DESKTOP-ULR8GDO\rdagumampan	yuniql-cli	    v1.0.1.0
 ```
 
 When the version is ready for release, you can create deployment pipelines to release the changes to each environment. A typical YAML pipelines in Azure DevOps looks like this.
@@ -91,11 +91,11 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: UseYUNIQLCLI@0
+- task: UseYUNIQLCLI@1
   inputs:
     version: 'latest'
 
-- task: RunYUNIQLCLI@0
+- task: RunYUNIQLCLI@1
   inputs:
     version: 'latest'
     connectionString: '<your-connection-string>'
@@ -116,11 +116,13 @@ When versioning an existing database, it may help to organize the scripts into c
 
 #### Learn further
 
-* [How yuniql works]({{< ref "/docs/how-yuniql-works.md" >}})
-* [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
+* [Get started]({{< ref "/docs/get-started.md" >}})
+* [Supported Platforms]({{< ref "/docs/supported-platforms.md" >}})
+
+<!-- * [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
 * [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
 * [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
-* [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md#" >}})
+* [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md#" >}}) -->
 
 #### Credits
 

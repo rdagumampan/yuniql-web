@@ -1,5 +1,5 @@
 +++
-description = "YUNIQL (yuu-nee-kel) is an open source schema versioning and database migration engine. Improve your Database DevOps discipline with repeatable deployment, plain SQL scripts, bulk import, integrated CI/CD pipelines, and Docker-based migrations."
+description = "YUNIQL (yuu-nee-kel) is an open source schema versioning and database migration engine. Use plain SQL scripts, bulk import CSV data, integrate CI/CD pipelines and run docker-based migrations on windows and linux."
 
 title = "YUNIQL"
 draft = false

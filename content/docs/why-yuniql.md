@@ -2,7 +2,7 @@
 title = "Why yuniql"
 description = "Pain points that yuniql solves and opportunities it presents to teams."
 bref = "Accelerate delivery. Release database changes safely. Challenges that yuniql solves and opportunities it presents to developers, data engineers and DBAs."
-weight = 1
+weight = 4
 draft = false
 toc = false
 +++

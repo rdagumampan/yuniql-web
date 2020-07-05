@@ -74,7 +74,7 @@ Using CSV files is an effective way to bulk load your master data and look-up ta
 using Yuniql.AspNetCore;
 
 
-app.UseYuniql(traceService, new YuniqlConfiguration
+app.UseYuniql(traceService, new Configuration
 {
     WorkspacePath = Path.Combine(Environment.CurrentDirectory, "_db"),
     ConnectionString = "Server=localhost,1400;Database=yuniqldb;User Id=SA;Password=P@ssw0rd!",

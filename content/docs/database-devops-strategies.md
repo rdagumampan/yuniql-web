@@ -71,11 +71,3 @@ Database developers can follow these CLI sequence calls to prepare local db vers
 #### Found bugs?
 
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
-
-<!-- ![](https://github.com/rdagumampan/yuniql/raw/master/assets/wiki-evodb-01.png)
-
-![](https://github.com/rdagumampan/yuniql/raw/master/assets/wiki-how-it-works-dir.png)
-
->Image inspired by [Evolutionary Database Design](https://www.martinfowler.com/articles/evodb.html) by Martin Fowler and Pramod Sadalage. -->
-<!-- 
-
