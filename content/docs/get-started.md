@@ -1,7 +1,7 @@
 +++
 title = "Get started!"
 description = "Kick-start your database devops with yuniql. Done in 10 mins max."
-bref = "Yuniql allows developers, data engineers and DBAs manage schema evolution via CLI, Azure DevOps and Docker. This is an express guide to using yuniql CLI. Run these commands line by line via Bash, CMD or Powershell."
+bref = "Express guide to versioning SqlServer and Azure Sql Database. Install, run, verify. 10-mins capped! Run line by line via CLI tool like Bash, CMD and Powershell."
 weight = 2
 draft = false
 toc = false
@@ -13,7 +13,7 @@ Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref
 choco install yuniql --version=1.0.1
 ```
 
-Download samples for Sql Server. Samples for sqlserver, postgresql and other platforms are available here https://github.com/rdagumampan/yuniql/tree/master/samples
+Download samples for Sql Server. Advanced samples are also available here https://github.com/rdagumampan/yuniql/tree/master/samples
 
 ```shell
 git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql
@@ -30,7 +30,7 @@ SETX YUNIQL_CONNECTION_STRING "Server=localhost,1400;Database=helloyuniql;User I
 Apply migrations with `yuniql run`. Yuniql discovers the project directory, sorts all versions, creates the target database if it doesn't exist and runs all migration steps in the right order. Each migration step may include `.sql` files, directories, subdirectories, and csv files.
 
 ```shell
-yuniql run -a
+yuniql run -a --debug
 yuniql list
 
 Running yuniql v1.0.1 for windows-x64
@@ -48,7 +48,7 @@ Verify results with your preferred SQL Client. A query with SSMS yields the foll
 
 ![yuniql-sqlserver-migration](/images/get-started-sqlserver.png)
 
-The latest build of yuniql supports SqlServer, PostgreSql and MySql. Integration tests are performed on instances hosted in Azure SQL Database, Amazon RDS and Google CloudSQL. See list of supported platforms [here]({{< ref "/docs/supported-platforms.md" >}})
+The latest build of yuniql supports SqlServer, PostgreSql, MySql and MariaDB. Integration tests are performed on instances hosted in Azure SQL Database, Amazon RDS and Google CloudSQL. See list of supported platforms [here]({{< ref "/docs/supported-platforms.md" >}})
 
 #### Learn further
 

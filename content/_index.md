@@ -1,5 +1,5 @@
 +++
-description = "YUNIQL (yuu-nee-kel) is an open source schema versioning and database migration engine. Use plain SQL scripts, bulk import CSV data, integrate CI/CD pipelines and run docker-based migrations on windows and linux."
+description = "YUNIQL (yuu-nee-kel) is a free and open source schema versioning and database migration engine made natively with .NET Core. Use plain SQL scripts, zero runtime dependencies, bulk import CSV data and integrate CI/CD pipelines."
 
 title = "YUNIQL"
 draft = false

@@ -7,7 +7,7 @@ draft = false
 toc = false
 +++
 
-Yuniql is a Data Platform DevOps tool using migration-based and database-first delivery model. Migration-based as each changeset to the schema and seed data is a set of carefully prepared scripts controlled with a version number. Database-first as it does not rely on application code to auto-generate the change scripts. Yuniql faciliates database DevOps thru common DevOps tools such as Azure Pipelines and Docker.
+yuniql is a data platform devops tool using *migration-based* and *database-first* delivery model. Migration-based as each changeset to the schema and seed data is a set of carefully prepared scripts controlled with a version number. Database-first as it does not rely on application code to auto-generate the change scripts. yuniql faciliates database devops thru Azure Pipelines and Docker.
 
 ![yuniql-evodb](/images/evodb-01.png)
 
@@ -95,16 +95,17 @@ steps:
   inputs:
     version: 'latest'
 
-- task: RunYUNIQLCLI@1
+- task: RunYUNIQLCLI@0
   inputs:
     version: 'latest'
     connectionString: '<your-connection-string>'
-    workspacePath: '$(Build.SourcesDirectory)\sqlserver-sample'
+    workspacePath: '$(Build.SourcesDirectory)\samples\sqlserver-sample'
     targetPlatform: 'SqlServer'
     additionalArguments: '--debug'
 ```
 
-
+<br/><br/>
+Get started on Sqlserver [{{< ref "/docs/get-started.md" >}}]({{< ref "/docs/get-started.md" >}}). For reference on PostgreSql, MySql and others, [{{< ref "/docs/get-started-postgresql.md" >}}]({{< ref "/docs/get-started-postgresql.md" >}})
 
 #### Advanced Options
 

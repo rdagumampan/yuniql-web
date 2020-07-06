@@ -13,7 +13,7 @@ Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref
 choco install yuniql --version=1.0.1
 ```
 
-Download samples for PostgreSql. Samples for postgresql, mysql and other platforms are available here https://github.com/rdagumampan/yuniql/tree/master/samples
+Download samples for PostgreSql. Samples for sqlserver, mysql and other platforms are available here https://github.com/rdagumampan/yuniql/tree/master/samples
 
 ```shell
 git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql
@@ -30,7 +30,7 @@ SETX YUNIQL_CONNECTION_STRING "Host=localhost;Port=5432;Username=sa;Password=P@s
 Apply migrations with `yuniql run` and specify the target platform with `--platform`. Yuniql discovers the project directory, sorts all versions, creates the target database if it doesn't exist and runs all migration steps in the right order. These includes `.sql` files, directories, subdirectories, and csv files.
 
 ```shell
-yuniql run --platform postgresql -a
+yuniql run --platform postgresql -a --debug
 yuniql list --platform postgresql
 
 Running yuniql v1.0.1 for windows-x64
@@ -48,7 +48,7 @@ Verify results with your preferred PostgreSql Client. A query with PgAdmin yield
 
 ![yuniql-evodb](/images/get-started-postgresql-01.png)
 
-The latest build of yuniql supports SqlServer, PostgreSql and MySql. Integration tests are performed on instances hosted in Azure SQL Database, Amazon RDS and Google CloudSQL. See list of supported platforms [here]({{< ref "/docs/supported-platforms.md" >}})
+The latest build of yuniql supports SqlServer, PostgreSql, MySql and MariaDB. Integration tests are performed on instances hosted in Azure SQL Database, Amazon RDS and Google CloudSQL. See list of supported platforms [here]({{< ref "/docs/supported-platforms.md" >}})
 
 #### Learn further
 

@@ -2,7 +2,7 @@
 title = "Migrate via Azure DevOps Pipelines"
 description = "Run your database migration from Azure DevOps and YAML pipelines."
 bref = "Establish continuous delivery pipelines with Azure DevOps and YAML tasks. Download and install extensions from Azure DevOps Marketplace."
-weight = 5
+weight = 4
 draft = false
 toc = false
 +++
@@ -11,9 +11,11 @@ Run your database migration from Azure DevOps Pipelines. The tasks downloads pac
 
 <img align="center" src="/images/wiki-az-devops-task-pipeline.png">
 
+Several sample YAML pipelines are also available here https://github.com/rdagumampan/yuniql-tutorials/tree/master/yuniql-az-pipelines.
+
 #### Pre-requisites
 
-* Works only with Windows-based agents for now
+* Verified only with windows and ubuntu agents
 * Requires a yuniql compliant directory structure. To create this structure you may [install yuniql-cli]({{< ref "/docs/install-yuniql.md" >}}), issue `yuniql init`, commit to a git repository and use the repository as input artifact in the pipelines. You may also copy our [existing samples](https://github.com/rdagumampan/yuniql/tree/master/samples) for your target database platform and commit to your own repo.
 
 #### Azure DevOps Pipelines (YAML)
