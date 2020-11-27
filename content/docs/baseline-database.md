@@ -58,7 +58,7 @@ You can generate scripts from existing SQL Server databases using SSMS Export Sc
 
 `yuniqlx baseline` is an experimental feature where we automate the script-generation of primary database objects and place results in `v0.00` of your migration project.  A command flow would look like this:
 
-[Download latest `yuniqlx` build here](https://ci.appveyor.com/api/buildjobs/fqmphdr60lamkqvx/artifacts/yuniqlx-nightly.zip)
+[Download latest `yuniqlx` build here](https://github.com/rdagumampan/yuniql-exploratory/releases/download/latest/yuniqlx-win-x64-latest.zip)
 Setup your local workspace
 
 ```shell
