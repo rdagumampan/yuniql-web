@@ -10,7 +10,7 @@ toc = false
 #### Install with choco package (windows-x64)
 Downloads latest yuniql CLI with [Chocolatey](https://chocolatey.org/) package manager. See further instructions here https://chocolatey.org/install.
 ```shell
-choco install yuniql --version=1.0.1
+choco install yuniql
 yuniql version
 ```
 
@@ -19,7 +19,7 @@ Install yuniql CLI on Linux. The package has been verified on Ubuntu 18.04.
 
 ```shell
 cd /home
-sudo curl https://github.com/rdagumampan/yuniql/releases/download/v1.0.1/yuniql-cli-linux-x64-latest.tar.gz -L -o yuniql.tar.gz
+sudo curl https://github.com/rdagumampan/yuniql/releases/download/v1.1.55/yuniql-cli-linux-x64-latest.tar.gz -L -o yuniql.tar.gz
 sudo tar -xvzf yuniql.tar.gz -C /bin
 
 cd /bin

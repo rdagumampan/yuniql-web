@@ -55,24 +55,20 @@ using Yuniql.Core;
 
 static void Main(string[] args)
 {
+	//create custom trace message sinks, this can be your own logger framework
 	var traceService = new ConsoleTraceService { IsDebugEnabled = true };
-	var configuration = new Configuration
-	{
-		WorkspacePath = Path.Combine(Environment.CurrentDirectory, "_db"),
-		ConnectionString = "Server=localhost,1400;Database=yuniqldb;User Id=SA;Password=P@ssw0rd!",
-		AutoCreateDatabase = true
-	};
 
+	//configure your migration run
+	var configuration = Configuration.Instance;
+	configuration.Platform = "sqlserver";
+	configuration.Workspace = Path.Combine(Environment.CurrentDirectory, "_db");
+	configuration.ConnectionString = "Server=localhost,1400;Database=helloyuniql;User Id=SA;Password=P@ssw0rd!";
+	configuration.IsAutoCreateDatabase = true;
+
+	//run migrations
 	var migrationServiceFactory = new MigrationServiceFactory(traceService);
 	var migrationService = migrationServiceFactory.Create();
-	migrationService.Initialize(configuration.ConnectionString);
-	migrationService.Run(
-		configuration.WorkspacePath,
-		configuration.TargetVersion,
-		configuration.AutoCreateDatabase,
-		configuration.Tokens,
-		configuration.VerifyOnly,
-		configuration.BulkSeparator);
+	migrationService.Run();
 }
 ```
 

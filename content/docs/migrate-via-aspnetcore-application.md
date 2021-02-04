@@ -53,12 +53,16 @@ using Yuniql.AspNetCore;
 ...
 ...
 
+//create custom trace message sinks, this can be your own logger framework
 var traceService = new ConsoleTraceService { IsDebugEnabled = true };
-app.UseYuniql(traceService, new Configuration
+
+//run migrations until latest version 
+app.UseYuniql(traceService, new Yuniql.AspNetCore.Configuration
 {
-	WorkspacePath = Path.Combine(Environment.CurrentDirectory, "_db"),
-	ConnectionString = "Server=localhost,1400;Database=yuniqldb;User Id=SA;Password=P@ssw0rd!",
-	AutoCreateDatabase = true, DebugTraceMode = true
+	Platform = "sqlserver",
+	Workspace = Path.Combine(Environment.CurrentDirectory, "_db"),
+	ConnectionString = "Server=localhost,1400;Database=helloyuniql;User Id=SA;Password=P@ssw0rd!",
+	IsAutoCreateDatabase = true, IsDebug = true
 });
 ```
 
