@@ -121,7 +121,7 @@ Build images and push to your preferred registry
 
 ```shell
 docker build -t yuniql -f dockerfile.multi-stage-linux-x64 .
-docker tag yuniql:latest rdagumampan/yuniql:linux-x64-latest
+docker tag yuniql:latest yuniql/yuniql:linux-x64-latest
 
 docker login -u="%DOCKERHUB_USERNAME%" -p="%DOCKERHUB_PASSWORD%"
 docker push yuniql:linux-x64-latest
@@ -129,7 +129,7 @@ docker push yuniql:linux-x64-latest
 
 ```shell
 docker build -t yuniql -f dockerfile.multi-stage-win-x64 .
-docker tag yuniql:latest rdagumampan/yuniql:win-x64-latest
+docker tag yuniql:latest yuniql/yuniql:win-x64-latest
 
 docker login -u="%DOCKERHUB_USERNAME%" -p="%DOCKERHUB_PASSWORD%"
 docker push yuniql:win-x64-latest
@@ -138,7 +138,7 @@ docker push yuniql:win-x64-latest
 Modify the Docker file of your database project
 
 ```dockerfile
-#FROM rdagumampan/yuniql:linux-x64-latest
+#FROM yuniql/yuniql:linux-x64-latest
 FROM <your-internal-repository>/yuniql:linux-x64-latest
 COPY . ./db
 ```

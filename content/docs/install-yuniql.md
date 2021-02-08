@@ -7,15 +7,19 @@ draft = false
 toc = false
 +++
 
+#### Download `yuniql.exe` directly from GitHub
+Download zipped paclage containing `yuniql.exe` file and extract to your workspace directory.
+https://github.com/rdagumampan/yuniql/releases/download/latest/yuniql-cli-win-x64-latest.zip
+
 #### Install with choco package (windows-x64)
-Downloads latest yuniql CLI with [Chocolatey](https://chocolatey.org/) package manager. See further instructions here https://chocolatey.org/install.
+Downloads latest yuniql CLI with [Chocolatey](https://chocolatey.org/) package manager. See further instructions here https://chocolatey.org/install. Run these commands under Administrator mode.
 ```shell
-choco install yuniql
+choco install yuniql -y
 yuniql version
 ```
 
 #### Install with tar.gz package (linux-x64)
-Install yuniql CLI on Linux. The package has been verified on Ubuntu 18.04.
+Install yuniql CLI on Linux. The package has been verified on Ubuntu 18.04+ and Debian on Windows Subsystem Linux (WSL). If your encounter this error `Couldn't find a valid ICU package installed on the system`, set global invariant variable `export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1`.
 
 ```shell
 cd /home
@@ -35,7 +39,7 @@ dotnet tool install -g yuniql.cli
 yuniql version
 ```
 
-#### Install with Powershell
+#### Install with Powershell and PATH
 Downloads latest yuniql CLI and append into `PATH` environment variable.
 ```powershell
 Invoke-WebRequest -Uri https://github.com/rdagumampan/yuniql/releases/download/latest/yuniql-cli-win-x64-latest.zip -OutFile  "c:\temp\yuniql-win-x64-latest.zip"
@@ -45,21 +49,29 @@ $Env:Path += ";c:\temp\yuniql-cli"
 yuniql version
 ```
 
-#### Download `yuniql.exe` direct from source
-Download zipped paclage containing `yuniql.exe` file and extract to your workspace directory.
-https://github.com/rdagumampan/yuniql/releases/download/latest/yuniql-cli-win-x64-latest.zip
-
-#### Install Nuget Package
-##### Install on ASP.NET Core project
+#### Install on ASP.NET Core project
 Use this for .NET Core WebApp and Worker App. Works only for .NET Core 3.0 and later. See how-to guide here [{{< ref "/docs/migrate-via-aspnetcore-application.md" >}}]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}}).
 ```shell
 dotnet add package Yuniql.AspNetCore
 ```
 
-##### Install on any .NET Core project
+#### Install on any .NET Core project
 Use this for .NET Core Console App. Also usable for WebApp and Worker App but we recommend `Yuniql.AspNetCore` for that. Works only for .NET Core 3.0 and later. See how-to guide here [{{< ref "/docs/migrate-via-netcore-console-application.md" >}}]({{< ref "/docs/migrate-via-netcore-console-application.md" >}}).
 ```shell
 dotnet add package Yuniql.Core
+```
+
+#### Install Azure DevOps Extensions
+Use this for running migration from YAML and classic pipelines. You can acquire free extensions from Azure Marketplace and install into your Azure DevOps organization https://marketplace.visualstudio.com/items?itemName=rdagumampan.yuniql-azdevops-extensions
+
+![](https://rdagumampan.gallerycdn.vsassets.io/extensions/rdagumampan/yuniql-azdevops-extensions/0.56.0/1576914414829/images/screenshot-01.png)
+
+#### Install with Docker
+Use `yuniql` Docker base image to build and run your migration from a container. See instructions here [migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}}). You can can visit `yuniql` on [Docker Hub](https://hub.docker.com/repository/docker/yuniql/yuniql)
+
+```shell
+docker pull yuniql/yuniql:latest
+docker pull yuniql/yuniql:linux-x64-latest
 ```
 
 #### Learn further
