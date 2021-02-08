@@ -19,7 +19,7 @@ yuniql version
 ```
 
 #### Install with tar.gz package (linux-x64)
-Install yuniql CLI on Linux. The package has been verified on Ubuntu 18.04+ and Debian on Windows Subsystem Linux (WSL). If your encounter this error `Couldn't find a valid ICU package installed on the system`, set global invariant variable `export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1`.
+Install yuniql CLI on Linux. The package has been verified on Ubuntu 18.04+ and Debian on Windows Subsystem Linux (WSL). If you encounter this `Error: Couldn't find a valid ICU package installed on the system`, set global invariant variable `export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1`.
 
 ```shell
 cd /home
