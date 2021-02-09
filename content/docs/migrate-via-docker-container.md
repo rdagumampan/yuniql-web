@@ -50,7 +50,14 @@ dir /O:N
 10/21/2019  22:41                   .gitignore
 ```
 
-Create first script file `setup_tables.sql` on `v0.00`.
+Check your Docker file and it should look like this. You can change the tag into specific release version of yuniql.
+
+```dockerfile
+FROM yuniql/yuniql:latest
+COPY . ./db
+```
+
+Create first script file `01.setup_tables.sql` on `v0.00`.
 
 ```sql
 CREATE TABLE regions (
@@ -60,7 +67,7 @@ CREATE TABLE regions (
 GO
 ```
 
-Create first script file `setup_data.sql` on `v0.00`.
+Create first script file `02.setup_data.sql` on `v0.00`.
 
 ```sql
 /*Data for the table regions */
@@ -85,7 +92,6 @@ Run migration from local docker.
 
 ```shell
 docker run --rm sqlserver-example --platform sqlserver -d -a -c "<your-connection-string>"
-docker logs sqlserver-example -f
 ```
 
 Commit your project into git repository and use it as input in creating CI/CD pipelines.
@@ -119,7 +125,7 @@ steps:
   displayName: 'docker run'
   inputs:
     command: run
-    arguments: 'sqlserver-example -c "$(AzSqlDemoDatabase)" --debug'
+    arguments: 'sqlserver-example --platform sqlserver -d -a -c "$(AzSqlDemoDatabase)"'
     addPipelineData: false
 ```
 
