@@ -53,30 +53,42 @@ dir /O:N
 Create first script file `setup_tables.sql` on `v0.00`.
 
 ```sql
-CREATE TABLE [dbo].[Visitor](
-	[VisitorID] [int] IDENTITY(1000,1) NOT NULL,
-	[FirstName] [nvarchar](255) NULL,
-	[LastName] [varchar](255) NULL,
-	[Address] [nvarchar](255) NULL,
-	[Email] [nvarchar](255) NULL
-) ON [PRIMARY];
+CREATE TABLE regions (
+    region_id INT IDENTITY(1,1) PRIMARY KEY,
+    region_name VARCHAR (25) DEFAULT NULL
+);
 GO
 ```
 
-Build docker image.
+Create first script file `setup_data.sql` on `v0.00`.
+
+```sql
+/*Data for the table regions */
+SET IDENTITY_INSERT regions ON;
+  
+INSERT INTO regions(region_id,region_name) VALUES (1,'Europe');
+INSERT INTO regions(region_id,region_name) VALUES (2,'Americas');
+INSERT INTO regions(region_id,region_name) VALUES (3,'Asia');
+INSERT INTO regions(region_id,region_name) VALUES (4,'Middle East and Africa');
+ 
+SET IDENTITY_INSERT regions OFF;  
+GO
+```
+
+Build local docker image.
 
 ```shell
 docker build -t sqlserver-example .
 ```
 
-Run migration from docker.
+Run migration from local docker.
 
 ```shell
-docker run sqlserver-example -c "<your-connection-string>" -a
+docker run --rm sqlserver-example --platform sqlserver -d -a -c "<your-connection-string>"
 docker logs sqlserver-example -f
 ```
 
-Commit your project into git and use it as input in creating CI/CD pipelines.
+Commit your project into git repository and use it as input in creating CI/CD pipelines.
 
 #### Setup Azure DevOps Pipelines
 The following pipelines runs `sqlserver-sample` project into Azure SQL Database. The samples are available on [Yuniql GitHub repository](https://github.com/rdagumampan/yuniql/tree/master/samples/sqlserver-sample). You may clone the repo to test the pipelines.
