@@ -1,7 +1,7 @@
 +++
 title = "PosgtreSql"
-description = "A quick-start guide to PostgreSql and other platforms. Install, run, verify."
-bref = "A quick-start guide to working with PostgreSql and other platforms. Install, run, verify. 10-mins capped. Run these commands line by line via CLI tool like Bash, CMD and Powershell."
+description = "PosgtreSql schema versioning and database migration with yuniql"
+bref = ""
 weight = 3
 draft = false
 toc = false
