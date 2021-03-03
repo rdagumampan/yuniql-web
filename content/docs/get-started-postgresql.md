@@ -16,8 +16,8 @@ User Id=<your-postgresql-user>;Password=<your-postgresql-password>
 ```
 |||
 |---|---|
-|Supported versions: |ostgreSql v9.6, v12.1, latest|
-|Supports transactional DDL|Full (Per session, per version, per statement)|
+|Supported versions: |PostgreSql v9.6 and later|
+|Supports transactional DDL|Yes (Per session, per version, per statement)|
 |Supports CSV bulk import|Yes|
 |Supports batch statements|No, `.sql` files are executed as single batch|
 |Driver package|npgsql, see https://www.npgsql.org/doc/index.html|

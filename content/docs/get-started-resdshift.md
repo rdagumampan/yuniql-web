@@ -1,6 +1,6 @@
 +++
 title = "Redshift"
-description = "Redshift database migration and schema versioning with yuniql"
+description = "Redshift schema versioning and database migration with yuniql"
 bref = ""
 weight = 16
 draft = false
@@ -16,8 +16,8 @@ User Id=<your-redshift-user>;Password=<your-redshift-password>
 ```
 |||
 |---|---|
-|Supported versions: |Redshift 1.0.2* or later|
-|Supports transactional DDL|Full (Per session, per version, per statement)|
+|Supported versions: |Redshift 1.0.2* and later|
+|Supports transactional DDL|Yes (Per session, per version, per statement)|
 |Supports CSV bulk import|Yes|
 |Supports batch statements|No, `.sql` files are executed as single batch|
 |Driver package|npgsql, see https://www.npgsql.org/doc/index.html|
