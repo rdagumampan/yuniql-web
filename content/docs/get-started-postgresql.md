@@ -1,5 +1,5 @@
 +++
-title = "PosgtreSql, MySql and Others"
+title = "PosgtreSql"
 description = "A quick-start guide to PostgreSql and other platforms. Install, run, verify."
 bref = "A quick-start guide to working with PostgreSql and other platforms. Install, run, verify. 10-mins capped. Run these commands line by line via CLI tool like Bash, CMD and Powershell."
 weight = 3
@@ -7,13 +7,30 @@ draft = false
 toc = false
 +++
 
+#### Driver information
+
+Connection string format, see https://www.connectionstrings.com/postgresql/
+```shell
+Server=<your-postgresql-server>;Port=5439;Database=<your-postgresql-database-name>;
+User Id=<your-postgresql-user>;Password=<your-postgresql-password>
+```
+|||
+|---|---|
+|Supported versions: |ostgreSql v9.6, v12.1, latest|
+|Supports transactional DDL|Full (Per session, per version, per statement)|
+|Supports CSV bulk import|Yes|
+|Supports batch statements|No, `.sql` files are executed as single batch|
+|Driver package|npgsql, see https://www.npgsql.org/doc/index.html|
+
+#### Getting started
+
 Install yuniql CLI with Chocolatey or use alternative ways listed here  [{{< ref "/docs/install-yuniql.md" >}}]({{< ref "/docs/install-yuniql.md" >}})
 
 ```shell
 choco install yuniql
 ```
 
-Download samples for PostgreSql. Samples for sqlserver, mysql and other platforms are available here https://github.com/rdagumampan/yuniql/tree/master/samples
+Download samples for PostgreSql. For samples of other platforms, visit https://github.com/rdagumampan/yuniql/tree/master/samples
 
 ```shell
 git clone https://github.com/rdagumampan/yuniql.git c:\temp\yuniql
@@ -24,6 +41,9 @@ Prepare your connection string in an environment variable. This sample uses Post
 
 ```shell
 docker run -d -e POSTGRES_USER=sa -e POSTGRES_PASSWORD=P@ssw0rd! -e POSTGRES_DB=helloyuniql -p 5432:5432 postgres
+
+SETX YUNIQL_PLATFORM "postgresql"
+SETX YUNIQL_WORKSPACE "c:\temp\yuniql\samples\basic-postgresql-sample"
 SETX YUNIQL_CONNECTION_STRING "Host=localhost;Port=5432;Username=sa;Password=P@ssw0rd!;Database=helloyuniql"
 ```
 
@@ -33,31 +53,28 @@ Apply migrations with `yuniql run` and specify the target platform with `--platf
 yuniql run --platform postgresql -a --debug
 yuniql list --platform postgresql
 
-Running yuniql v1.0.1 for windows-x64
+Running yuniql v1.1.55 for windows-x64
 Copyright 2019 (C) Rodel E. Dagumampan. Apache License v2.0
 Visit https://yuniql.io for documentation & more samples
 
-+---------------+----------------------+------------+---------------+---------------------+
-| SchemaVersion | AppliedOnUtc         | Status     | AppliedByUser | AppliedByTool       |
-+---------------+----------------------+------------+---------------+---------------------+
-| v0.00         | 2020-07-04 15:35:17Z | Successful | sa            | yuniql-cli v1.0.1.0 |
-+---------------+----------------------+------------+---------------+---------------------+
++---------------+----------------------+------------+---------------+----------------------+--------------+
+| SchemaVersion | AppliedOnUtc         | Status     | AppliedByUser | AppliedByTool        | Duration     |
++---------------+----------------------+------------+---------------+----------------------+--------------+
+| v0.00         | 2021-03-03 20:57:09Z | Successful | sa            | yuniql-cli v1.1.55.0 | 197 ms / 0 s |
+| v0.01         | 2021-03-03 20:57:09Z | Successful | sa            | yuniql-cli v1.1.55.0 | 218 ms / 0 s |
+| v0.02         | 2021-03-03 20:57:09Z | Successful | sa            | yuniql-cli v1.1.55.0 | 246 ms / 0 s |
++---------------+----------------------+------------+---------------+----------------------+--------------+
 ```
 
 Verify results with your preferred PostgreSql Client. A query with PgAdmin yields the following results.
 
 ![yuniql-evodb](/images/get-started-postgresql-01.png)
 
-The latest build of yuniql supports SqlServer, PostgreSql, MySql and MariaDB. Integration tests are performed on instances hosted in Azure SQL Database, Amazon RDS and Google CloudSQL. See list of supported platforms [here]({{< ref "/docs/supported-platforms.md" >}})
+##### Known Issues and limitations
 
-#### Learn further
+- Only supports username and password authentication on connection string. Advanced token-based autnentication have not been tested but could just work, please try and send us feedback.
+- Bulk import of CSV files works when the destination table is already committed. As work around, you can place the CSV files into separate minor version and apply migration with `--transaction-mode = version`.
 
-* [Supported Platforms]({{< ref "/docs/supported-platforms.md" >}})
-* [Yuniql CLI Command Reference]({{< ref "/docs/yuniql-cli-command-reference.md" >}})
-* [Migrate via ASP.NET Core]({{< ref "/docs/migrate-via-aspnetcore-application.md" >}})
-* [Migrate via Azure DevOps]({{< ref "/docs/migrate-via-azure-devops-pipelines.md" >}})
-* [Migrate via Docker Container]({{< ref "/docs/migrate-via-docker-container.md" >}})
-* [Migrate via Console Application]({{< ref "/docs/migrate-via-netcore-console-application.md" >}})
+##### Found bugs?
 
-#### Found bugs?
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
