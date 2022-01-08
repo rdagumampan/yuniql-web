@@ -18,3 +18,21 @@ hugo server -D
 ```shell
 hugo
 ```
+
+## How to publish in yuniql.io
+See https://ci.appveyor.com/project/rdagumampan/yuniql-web
+
+```shell
+choco install hugo
+
+cd c:\projects\yuniql-web
+hugo
+
+cd c:\projects\yuniql-web\public
+git init
+git remote add origin https://github.com/rdagumampan/yuniql.io.git
+git remote -v
+git add . -A
+git commit -m "Published from CI/CD pipeline in AppVeyor"
+git push origin master --force
+```
