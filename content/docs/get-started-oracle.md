@@ -71,7 +71,7 @@ username: sys
 password: Oradoc_db1
 ```
 
-Prepare your connection string and environment variables. You can also pass this directly as CLI parameters using `--platform oracle`, `-p <your-workspace>` and `-c <your-connection-string>`. For more connection string samples, visit https://www.connectionstrings.com/postgresql.
+Prepare your connection string and environment variables. You can also pass this directly as CLI parameters using `--platform oracle`, `-p <your-workspace>` and `-c <your-connection-string>`. For more connection string samples, visit https://www.connectionstrings.com/oracle-data-provider-for-net-odp-net/.
 
 ```shell
 SETX YUNIQL_PLATFORM "oracle"
