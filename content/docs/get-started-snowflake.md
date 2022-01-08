@@ -74,6 +74,11 @@ Verify results with your Snowflake Management Plane. A query from Snowflake Edit
 - Transaction mode default to Statement. Snowflake only supports Implicit Transaction for DDL statements. This means each DDL statement are executed as one atomic unit. If there's an open transaction prior to it, the transaction will be auto-committed and a new transaction will be created to cover the DDL statement. See https://docs.snowflake.com/en/sql-reference/transactions.html
 - GO batch terminator. The .sql files can be prepared and batched with "GO" terminator. This is not official Snowflake batch terminator. We did this because the current semicolon ";" terminator parser seems need further work :). If you use "SELECT GET_DDL('DATABASE', 'HELLO_YUNIQL');" to dump schema from your database, please add "GO" at each DDL statement.
 
+##### Watch our short videos on youtube
+
+{{< youtube Lro2dfX2R8U >}}
+<br/>
+
 ##### Found bugs?
 
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).

@@ -1,5 +1,5 @@
 +++
-title = "Intstall yuniql CLI"
+title = "Install yuniql CLI"
 description = "Install yuniql with choco, dotnet global tool, powershell, or direct download."
 bref = "Install yuniql CLI from various distribution channels for Windows and Linux. Use Chocolatey, dotnet global tool, powershell, nuget packages or download directly."
 weight = 103
@@ -87,6 +87,11 @@ docker pull yuniql/yuniql:linux-x64-latest
 * [Bulk Import CSV Master Data]({{< ref "/docs/bulk-import-csv-master-data.md" >}})
 * [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
 * [Environment-aware Migration]({{< ref "/docs/environment-aware-scripts.md" >}}) -->
+
+##### Watch our short videos on youtube
+
+{{< youtube JaX6h-F-FZU >}}
+<br/>
 
 #### Found bugs?
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).

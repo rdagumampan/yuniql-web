@@ -75,6 +75,11 @@ Verify results with your preferred PostgreSql Client. A query with PgAdmin yield
 - Only supports username and password authentication on connection string. Advanced token-based autnentication have not been tested but could just work, please try and send us feedback.
 - Bulk import of CSV files works when the destination table is already committed. As work around, you can place the CSV files into separate minor version and apply migration with `--transaction-mode = version`.
 
+##### Watch our short videos on youtube
+
+{{< youtube F-G5zFG4nco >}}
+<br/>
+
 ##### Found bugs?
 
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).

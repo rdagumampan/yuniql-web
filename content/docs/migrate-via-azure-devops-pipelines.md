@@ -84,6 +84,11 @@ Erases the target database objects (tables, procedures, functions, and others) u
 * [Use Token Replacement]({{< ref "/docs/token-replacement.md" >}})
 * [Environment-aware Migration]({{< ref "/docs/environment-aware-scripts.md" >}})
 
+##### Watch our short videos on youtube
+
+{{< youtube HZtbnaPXO5I >}}
+<br/>
+
 #### Found bugs?
 
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).

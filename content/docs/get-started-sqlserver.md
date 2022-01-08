@@ -74,5 +74,10 @@ Verify results with your preferred SQL Client. A query with SSMS yields the foll
 
 - Only supports username and password authentication on connection string. Advanced token-based autnentication have not been tested but could just work, please try and send us feedback.
 
+##### Watch our short videos on youtube
+
+{{< youtube d73eAmsn_KM >}}
+<br/>
+
 ##### Found bugs?
 Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
