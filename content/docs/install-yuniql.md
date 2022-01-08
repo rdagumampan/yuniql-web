@@ -2,7 +2,7 @@
 title = "Intstall yuniql CLI"
 description = "Install yuniql with choco, dotnet global tool, powershell, or direct download."
 bref = "Install yuniql CLI from various distribution channels for Windows and Linux. Use Chocolatey, dotnet global tool, powershell, nuget packages or download directly."
-weight = 11
+weight = 103
 draft = false
 toc = false
 +++

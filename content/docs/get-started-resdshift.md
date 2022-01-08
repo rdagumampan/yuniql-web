@@ -2,7 +2,7 @@
 title = "Redshift"
 description = "Redshift schema versioning and database migration with yuniql"
 bref = ""
-weight = 16
+weight = 305
 draft = false
 toc = false
 +++
@@ -72,6 +72,11 @@ Verify results with your preferred Redshift Client. A query from Redshift Editor
 
 - Only supports username and password authentication on connection string. Advanced token-based autnentication have not been tested but could just work, please try and send us feedback.
 - Driver used is primary for PostgreSql databases and limitation may emerge as Redshift continues to develop. See compatibility notes here https://www.npgsql.org/doc/compatibility.html#amazon-redshift
+
+##### Watch our 2 minutes video on youtube
+
+{{< youtube TUJijZsXP7k >}}
+<br/>
 
 ##### Found bugs?
 

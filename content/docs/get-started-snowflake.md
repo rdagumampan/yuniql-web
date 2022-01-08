@@ -2,7 +2,7 @@
 title = "Snowflake"
 description = "Snowflake schema versioning and database migration with yuniql"
 bref = ""
-weight = 16
+weight = 306
 draft = false
 toc = false
 +++

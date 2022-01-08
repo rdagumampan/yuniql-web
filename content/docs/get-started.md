@@ -2,7 +2,7 @@
 title = "Get started!"
 description = "Kick-start your database devops with yuniql. Done in 10 mins max."
 bref = "Express guide to versioning SqlServer and Azure Sql Database. Install, run, verify. 10-mins capped! Run line by line via CLI tool like Bash, CMD and Powershell."
-weight = 2
+weight = 101
 draft = false
 toc = false
 +++

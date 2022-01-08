@@ -2,7 +2,7 @@
 title = "SQL Server"
 description = "SQL Server schema versioning and database migration with yuniql"
 bref = ""
-weight = 16
+weight = 301
 draft = false
 toc = false
 +++

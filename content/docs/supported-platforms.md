@@ -2,7 +2,7 @@
 title = "Supported Platforms"
 description = "List of supported platforms. Track build status and latest platform verification test results."
 bref = ""
-weight = 16
+weight = 403
 draft = false
 toc = false
 +++

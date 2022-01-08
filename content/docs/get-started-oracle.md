@@ -2,7 +2,7 @@
 title = "Oracle"
 description = "Oracle schema versioning and database migration with yuniql"
 bref = ""
-weight = 16
+weight = 304
 draft = false
 toc = false
 +++

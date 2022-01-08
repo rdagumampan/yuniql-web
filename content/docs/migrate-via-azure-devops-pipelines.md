@@ -2,7 +2,7 @@
 title = "Migrate via Azure DevOps Pipelines"
 description = "Run your database migration from Azure DevOps and YAML pipelines."
 bref = "Establish continuous delivery pipelines with Azure DevOps and YAML tasks. Download and install extensions from Azure DevOps Marketplace."
-weight = 4
+weight = 351
 draft = false
 toc = false
 +++

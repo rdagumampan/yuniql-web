@@ -2,7 +2,7 @@
 title = "MySql"
 description = "MySql schema versioning and database migration with yuniql"
 bref = ""
-weight = 16
+weight = 303
 draft = false
 toc = false
 +++

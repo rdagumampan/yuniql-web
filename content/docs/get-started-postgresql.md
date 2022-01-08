@@ -2,7 +2,7 @@
 title = "PosgtreSql"
 description = "PosgtreSql schema versioning and database migration with yuniql"
 bref = ""
-weight = 3
+weight = 302
 draft = false
 toc = false
 +++
